@@ -67,7 +67,7 @@
 (depends-on "unfill")
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
-(depends-on "nlinum")
+;; (depends-on "nlinum")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
