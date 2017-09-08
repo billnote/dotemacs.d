@@ -1,0 +1,21 @@
+\documentclass[11pt,professionalfonts]{beamer}
+\mode
+\usetheme{{{{Warsaw}}}}
+\usecolortheme{{{{beamercolortheme}}}}
+\beamertemplateballitem
+\setbeameroption{show notes}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{fontspec,xunicode,xltxtra}
+\usepackage{polyglossia}
+\setmainfont{Times New Roman}
+\setCJKmainfont{DejaVu Sans YuanTi}
+\setCJKmonofont{DejaVu Sans YuanTi Mono}
+\usepackage{verbatim}
+\usepackage{listings}
+\institute{{{{beamerinstitute}}}}
+\subject{{{{beamersubject}}}}

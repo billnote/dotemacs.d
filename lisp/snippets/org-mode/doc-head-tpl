@@ -1,0 +1,26 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: document template
+# key: doct
+# binding: direct-keybinding
+# --
+
+#+TITLE: $1
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./resources/style/style.css" />
+#+LATEX_CLASS: cn-article
+#+LATEX_HEADER: \fancyhead[L]{\includegraphics{$1}}
+#+LATEX_HEADER: \fancyhead[R]{$2}
+#+LATEX_HEADER: \fancyhead[C]{$3}
+#+LATEX_HEADER: \fancyfoot[C]{Copyright © $4.}
+#+LATEX_HEADER: \fancyfoot[R]{\thepage}
+#+LATEX_HEADER: \tcbset{enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+#+LATEX_HEADER: colback=yellow!10!white,colframe=DarkCyan,colbacktitle=Salmon!30!white,
+#+LATEX_HEADER: coltitle=black,center title}
+#+OPTIONS: toc:5
+#+OPTIONS: ^:{}
+#+AUTHOR: $5
+#+EMAIL: bill.huang@mplusmedia.cn
+
+#+LATEX: \newpage
+#+LATEX: \rowcolors{1}{Linen}{Beige} % table 行颜色设置
+
+$6

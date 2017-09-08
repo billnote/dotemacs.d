@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: plantuml template
+# key: puml
+# binding: direct-keybinding
+# --
+
+#+BEGIN_SRC plantuml :file $1 :cmdline -charset UTF-8 :exports results
+$2
+#+END_SRC

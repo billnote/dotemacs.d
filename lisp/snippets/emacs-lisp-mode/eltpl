@@ -1,0 +1,13 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: elips template
+# key: eltpl
+# --
+;;; `(file-name-nondirectory buffer-file-name)` --- Summary
+;;; Commentary:
+;;; $1
+;;; Code:
+
+$2
+
+(provide '`(file-name-sans-extension (file-name-nondirectory buffer-file-name))`)
+;;; `(file-name-nondirectory buffer-file-name)` ends here

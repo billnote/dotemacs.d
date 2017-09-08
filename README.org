@@ -1,0 +1,3 @@
+* Emacs config
+This emacs config base on https://github.com/purcell/emacs.d.
+but use [[https://github.com/cask/cask][Cask]] manage package.

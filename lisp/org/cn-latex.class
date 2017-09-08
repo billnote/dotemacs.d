@@ -1,0 +1,145 @@
+\\documentclass[10pt,a4paper,titlepage]{article}
+\\usepackage{graphicx}
+\\usepackage[table,svgnames]{xcolor}
+\\usepackage{xeCJK}
+\\usepackage{lmodern}
+\\usepackage{verbatim}
+\\usepackage{fixltx2e}
+\\usepackage{longtable}
+\\usepackage{tabu}
+\\usepackage{float}
+\\usepackage{tikz}
+\\usepackage{wrapfig}
+\\usepackage{soul}
+\\usepackage{textcomp}
+\\usepackage{listings}
+\\usepackage{geometry}
+\\usepackage{algorithm}
+\\usepackage{algorithmic}
+\\usepackage{marvosym}
+\\usepackage{wasysym}
+\\usepackage{latexsym}
+\\usepackage{natbib}
+\\usepackage{array,tabularx}
+\\usepackage[listings,skins,breakable]{tcolorbox}
+\\usepackage[obeyspaces]{url}
+\\tcbuselibrary{skins}
+\\tcbuselibrary{hooks}
+\\tcbuselibrary{breakable}
+\\usepackage[xetex,colorlinks=true,CJKbookmarks=true,linkcolor=blue,urlcolor=blue,menucolor=blue]{hyperref}
+\\usepackage{fontspec,xunicode,xltxtra}
+\\usepackage{fancyhdr} %设置页眉页脚的宏包
+\\usepackage{indentfirst}
+\\usepackage{courier}
+\\setmainfont[BoldFont=Arial]{Arial}
+\\setsansfont[BoldFont=Arial]{Arial}
+\\setmonofont{Andale Mono}
+\\setCJKmainfont{Kaiti SC}%中文字体
+\\setCJKmonofont{Kaiti SC}
+\\hypersetup{unicode=true}
+\\geometry{a4paper, textwidth=6.5in, textheight=10in,marginparsep=7pt, marginparwidth=.6in}
+\\definecolor{codegreen}{rgb}{0,0.6,0}
+\\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\\colorlet{punct}{red!60!black}
+\\definecolor{background}{HTML}{EEEEEE}
+\\definecolor{delim}{RGB}{20,105,176}
+\\colorlet{numb}{magenta!60!black}
+\\punctstyle{kaiming}
+\\tolerance=1000
+\\fancyfoot[C]{\\bfseries\\thepage}
+\\pagestyle{fancy}
+\\newcommand\\JSONnumbervaluestyle{\\color{blue}}
+\\newcommand\\JSONstringvaluestyle{\\color{red}}
+\\definecolor{myblue}{RGB}{20,105,176}
+% switch used as state variable
+\\newif\\ifcolonfoundonthisline
+\\makeatletter
+\\lstdefinestyle{codestyle}
+{
+   backgroundcolor=\\color{backcolour},
+    commentstyle=\\color{codegreen},
+    keywordstyle=\\color{magenta},
+    numberstyle=\\tiny\\color{codegray},
+    stringstyle=\\color{codepurple},
+    basicstyle=\\footnotesize\\ttfamily,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=4,
+    frame=single,
+    frameround=tttt,
+    framerule=8pt,
+    xrightmargin=4mm,
+    xleftmargin=4mm}
+
+% flip the switch if a colon is found in Pmode
+\\newcommand\\processColon@codestyle{%
+  \\colon@codestyle%
+  \\ifnum\\lst@mode=\\lst@Pmode%
+    \\global\\colonfoundonthislinetrue%
+  \\fi
+}
+
+\\lst@AddToHook{Output}{%
+  \\ifcolonfoundonthisline%
+    \\ifnum\\lst@mode=\\lst@Pmode%
+      \\def\\lst@thestyle{\\JSONnumbervaluestyle}%
+    \\fi
+  \\fi
+  %override by keyword style if a keyword is detected!
+  \\lsthk@DetectKeywords% 
+}
+
+% reset the switch at the end of line
+\\lst@AddToHook{EOL}%
+  {\\global\\colonfoundonthislinefalse}
+\\makeatother
+
+\\lstdefinelanguage{json}{ % support json
+    keywords={false,true},
+    alsoletter=0123456789.,
+    morecomment=[l]//,
+    morecomment=[s]{/*}{*/},
+    morestring=[s]{"}{"},
+    stringstyle=\\ifcolonfoundonthisline\\JSONstringvaluestyle\\fi,
+    MoreSelectCharTable=\\lst@DefSaveDef{`:}\\colon@codestyle{\\processColon@codestyle},
+    literate=
+     *{:}{{{\\color{punct}{:}}}}{1}
+      {,}{{{\\color{punct}{,}}}}{1}
+      {\\{}{{{\\color{delim}{\\{}}}}{1}
+      {\\}}{{{\\color{delim}{\\}}}}}{1}
+      {[}{{{\\color{delim}{[}}}}{1}
+      {]}{{{\\color{delim}{]}}}}{1},
+}
+
+\\lstdefinelanguage{js}{ % support js
+    morekeywords={typeof,new,true,false,catch,function,return,null,catch,switch,var,if,in,while,do,else,case,break},
+    morecomment=[l]//,
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]',
+    }[keywords,comments,strings]
+\\setlength\\arrayrulewidth{0.8pt}\\arrayrulecolor{MidnightBlue} % table line style
+
+\\lstdefinelanguage{protobuf}{ % support protobuf
+    morekeywords={double,float,int32,int64,uint32,uint64,sint32,sint64,fixed32,sfixed32,sfiex64,bool,string,bytes,messageType,enumType,map},
+    morecomment=[l]//,
+    morecomment=[s]{/*}{*/},
+    morestring=[b]",
+    morestring=[b]',
+    classoffset=1, % starting new class
+    otherkeywords={message,required,optional,repeated,syntax,import,package,public,group},
+    morekeywords={message,required,optional,repeated,syntax,import,package,public,group},
+    keywordstyle=\\color{myblue},
+    classoffset=0,
+    }[keywords,comments,strings]
+\\setlength\\arrayrulewidth{0.8pt}\\arrayrulecolor{MidnightBlue} % table line style
+%\\rowcolors{1}{Linen}{Beige} % table 行颜色设置

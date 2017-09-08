@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: mmtpl
+# key: mmtpl
+# --
+* `(format-time-string "%Y-%m-%d")`$0
+** Analytics 项目组
+|--------+------+-------|
+| TASKID | TASK | OWNER |
+|--------+------+-------|
+| A001   |  $1  |       |
+|--------+------+-------|

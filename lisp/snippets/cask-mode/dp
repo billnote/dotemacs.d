@@ -1,0 +1,5 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: cask depends template
+# key: dp
+# --
+(depends-on "$1")

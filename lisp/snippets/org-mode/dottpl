@@ -1,0 +1,11 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: dot
+# key: dot
+# binding: direct-keybinding
+# --
+
+#+BEGIN_SRC dot :file $1./resources/svg/$2.svg :cmdline -Kdot -Tsvg :exports $3
+digraph svg {
+$4
+}
+#+END_SRC

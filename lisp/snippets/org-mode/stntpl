@@ -1,0 +1,14 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: stn
+# key: stn
+# binding: direct-keybinding
+# --
+
+*** $1
+    :PROPERTIES:
+    :ESTIMATED:
+    :ACTUAL:
+    :OWNER:
+    :TASKID:
+    :END:
+    $2

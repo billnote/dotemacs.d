@@ -1,0 +1,9 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: latex talbe
+# key: ltb
+# binding: direct-keybinding
+# --
+
+#+LATEX: \tcbset{tabularx={$1},before upper app={\rowcolor{DarkCyan} }}
+#+ATTR_LATEX: :environment tcolorbox :align ""
+|$2|$3
