@@ -68,6 +68,7 @@
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
+(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
