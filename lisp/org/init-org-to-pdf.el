@@ -9,6 +9,11 @@
   :type 'string
   :group 'org-export)
 
+(defcustom cn-beamer-class-file "~/.emacs.d/lisp/org/cn-beamer.class"
+  "The cn-article latex classes."
+  :type 'string
+  :group 'org-export)
+
 (setq org-latex-pdf-process
       '("xelatex -interaction nonstopmode %f"
         "xelatex -interaction nonstopmode %f"))
@@ -63,9 +68,11 @@ CONTENTS source string.
 BACKEND backend.
 INFO info."
   (interactive)
-  (when  (and (org-export-derived-backend-p backend 'latex)
-              (string-match "{{{cn-article-class}}}" contents))
-    (replace-regexp-in-string "{{{cn-article-class}}}" (f-read-text cn-article-class-file) contents)))
+  (when  (org-export-derived-backend-p backend 'latex)
+    (when (string-match "{{{cn-article-class}}}" contents)
+      (replace-regexp-in-string "{{{cn-article-class}}}" (f-read-text cn-article-class-file) contents))
+    (when (string-match "{{{cn-beamer-class}}}" contents)
+      (replace-regexp-in-string "{{{cn-beamer-class}}}" (f-read-text cn-article-class-file) contents))))
 
 (add-to-list 'org-export-filter-final-output-functions 'replace-cn-article-class)
 
