@@ -1,5 +1,6 @@
 (source "gnu" "http://elpa.emacs-china.org/gnu/")
 (source "melpa" "http://elpa.emacs-china.org/melpa/")
+(source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
 (source "org" "http://orgmode.org/elpa/")
 
 (depends-on "exec-path-from-shell")
@@ -94,7 +95,7 @@
 (depends-on "gnuplot-mode")
 (depends-on "thrift")
 (depends-on "protobuf-mode")
-(depends-on "crontab-mode")
+(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
 (depends-on "csv-mode")
@@ -133,6 +134,7 @@
 (depends-on "origami")
 (depends-on "aggressive-indent")
 (depends-on "paredit")
+(depends-on "imenu-list")
 
 ;;------------------------------------------------
 ;; rust-lang mode
@@ -220,7 +222,6 @@
 (depends-on "org-plus-contrib")
 (depends-on "org-fstree")
 (depends-on "grab-mac-link")
-(depends-on "org-mac-iCal")
 (depends-on "org-cliplink")
 
 ;;------------------------------------------------

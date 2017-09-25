@@ -33,13 +33,13 @@
   (spaceline-toggle-all-the-icons-fullscreen-on)
   (spaceline-toggle-all-the-icons-buffer-position-on)
   (spaceline-toggle-all-the-icons-narrowed-on)
-  (spaceline-toggle-all-the-icons-buffer-position-on)
   (spaceline-toggle-all-the-icons-hud-on)
   (spaceline-toggle-all-the-icons-battery-status-on)
   (spaceline-toggle-all-the-icons-weather-on)
   (spaceline-toggle-all-the-icons-git-status-on)
   (spaceline-toggle-all-the-icons-flycheck-status-on)
   (spaceline-toggle-all-the-icons-flycheck-status-info-on)
+  (spaceline-toggle-all-the-icons-multiple-cursors-on)
   
   (spaceline-define-segment buffer-encoding
     "The full `buffer-file-coding-system'."

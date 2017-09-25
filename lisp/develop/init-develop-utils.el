@@ -84,5 +84,8 @@
               ("C-c F" . origami-toggle-all-nodes)))
 ;; TODO add bind-key
 
+
+(use-package imenu-list)
+
 (provide 'init-develop-utils)
 ;;; init-develop-utils.el ends here
