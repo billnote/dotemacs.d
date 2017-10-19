@@ -98,6 +98,9 @@
 (require 'init-themes)
 (require 'init-mode-line-themes)
 
+;; translate
+(require 'init-translate)
+
 
 
 ;;----------------------------------------------------------------------------

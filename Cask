@@ -85,6 +85,9 @@
 (depends-on "idle-highlight-mode")
 (depends-on "whitespace-cleanup-mode")
 (depends-on "regex-tool")
+(depends-on "names")
+(depends-on "chinese-word-at-point")
+(depends-on "google-translate")
 
 ;;------------------------------------------------
 ;;  major edit mode
