@@ -151,7 +151,7 @@
       (insert selected)))))  
 
 :bind
-(("C-c t" . gtc-at-point-echo-area)
+(("C-c t" . gtc-at-point)
  ("C-c T" . gtc-search-at-point-and-replace))
 )
 

@@ -23,10 +23,11 @@
 ;;------------------------------------------------
 ;;  dired
 ;;------------------------------------------------
-(depends-on "dired+")
 (depends-on "dired-sort")
+(depends-on "diredfl")
 (depends-on "neotree")
 (depends-on "disable-mouse")
+(depends-on "all-the-icons-dired")
 
 ;;------------------------------------------------
 ;;  modern library for Emacs
@@ -169,7 +170,6 @@
 (depends-on "auto-compile")
 (depends-on "hl-sexp")
 (depends-on "immortal-scratch")
-(depends-on "redshank")
 (depends-on "eldoc-eval")
 (depends-on "cl-lib-highlight")
 (depends-on "macrostep")
