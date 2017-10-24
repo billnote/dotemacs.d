@@ -34,8 +34,8 @@
 \\setmainfont[BoldFont=Arial]{Arial}
 \\setsansfont[BoldFont=Arial]{Arial}
 \\setmonofont{Andale Mono}
-\\setCJKmainfont{Kaiti SC}%中文字体
-\\setCJKmonofont{Kaiti SC}
+\\setCJKmainfont{PingFang SC}%中文字体
+\\setCJKmonofont{PingFang SC}
 \\hypersetup{unicode=true}
 \\geometry{a4paper, textwidth=6.5in, textheight=10in,marginparsep=7pt, marginparwidth=.6in}
 \\definecolor{codegreen}{rgb}{0,0.6,0}

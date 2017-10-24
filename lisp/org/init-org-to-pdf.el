@@ -70,11 +70,20 @@ INFO info."
   (interactive)
   (when  (org-export-derived-backend-p backend 'latex)
     (when (string-match "{{{cn-article-class}}}" contents)
-      (replace-regexp-in-string "{{{cn-article-class}}}" (f-read-text cn-article-class-file) contents))
+      (replace-regexp-in-string "{{{cn-article-class}}}" (f-read-text cn-article-class-file) contents))))
+
+(defun replace-cn-beamer-class (contents backend info)
+  "Replace cn article marco.
+CONTENTS source string.
+BACKEND backend.
+INFO info."
+  (interactive)
+  (when  (org-export-derived-backend-p backend 'latex)
     (when (string-match "{{{cn-beamer-class}}}" contents)
       (replace-regexp-in-string "{{{cn-beamer-class}}}" (f-read-text cn-article-class-file) contents))))
 
 (add-to-list 'org-export-filter-final-output-functions 'replace-cn-article-class)
+(add-to-list 'org-export-filter-final-output-functions 'replace-cn-beamer-class)
 
 (setq ps-paper-type 'a4
       ps-font-size 16.0
