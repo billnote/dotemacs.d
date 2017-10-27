@@ -1,4 +1,4 @@
-\\documentclass[10pt,a4paper,titlepage]{article}
+\\documentclass[10pt,a4paper,titlepage]{ctexart}
 \\usepackage{graphicx}
 \\usepackage[table,svgnames]{xcolor}
 \\usepackage{xeCJK}
