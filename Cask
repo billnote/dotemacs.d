@@ -1,7 +1,16 @@
-(source "gnu" "http://elpa.emacs-china.org/gnu/")
-(source "melpa" "http://elpa.emacs-china.org/melpa/")
-(source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
-(source "org" "http://orgmode.org/elpa/")
+;; (source "gnu" "http://elpa.emacs-china.org/gnu/")
+;; (source "melpa" "http://elpa.emacs-china.org/melpa/")
+;; (source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
+;; (source "org" "http://orgmode.org/elpa/")
+
+
+;;------------------------------------------------
+;;  package manager
+;;------------------------------------------------
+(depends-on "cask")
+(depends-on "pallet")
+(depends-on "use-package")
+
 
 (depends-on "exec-path-from-shell")
 (depends-on "session")
@@ -37,13 +46,6 @@
 (depends-on "f")
 
 ;;------------------------------------------------
-;;  package manager
-;;------------------------------------------------
-(depends-on "cask")
-(depends-on "pallet")
-(depends-on "use-package")
-
-;;------------------------------------------------
 ;;  frame
 ;;------------------------------------------------
 (depends-on "popwin")
@@ -70,7 +72,7 @@
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
-(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
+;; (depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
@@ -99,7 +101,7 @@
 (depends-on "gnuplot-mode")
 (depends-on "thrift")
 (depends-on "protobuf-mode")
-(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
+;; (depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
 (depends-on "csv-mode")

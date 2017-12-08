@@ -47,6 +47,7 @@
 
 ;; custom config
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(setq network-security-level 'low)
 
 ;; shell path
 (require 'init-exec-path)
