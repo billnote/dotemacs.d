@@ -2,12 +2,18 @@
 ;;; Commentary:
 ;;; init mode line themes
 ;;; Code:
+(use-package spaceline :demand t)
+(use-package spaceline-config
+  :ensure nil
+  :after spaceline
+  :config
+  (spaceline-toggle-buffer-encoding-on)
+  (spaceline-toggle-input-method-on)
+  )
 
 (use-package spaceline-all-the-icons
   :after spaceline
   :init
-  (use-package powerline)
-  (use-package spaceline)
   (use-package all-the-icons)
   (use-package git-gutter)
   (use-package anzu)
@@ -20,14 +26,13 @@
     (setq yahoo-weather-update-interval 7200)
     (yahoo-weather-mode))
   :config
-
+  (spaceline-all-the-icons-theme)
   (spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching
   (spaceline-all-the-icons--setup-package-updates) ;; Enable package update indicator
   (spaceline-all-the-icons--setup-git-ahead)       ;; Enable # of commits ahead of upstream in git
   (spaceline-all-the-icons--setup-paradox)         ;; Enable Paradox mode line
   (spaceline-all-the-icons--setup-neotree)         ;; Enable Neotree mode line
   (setq spaceline-all-the-icons-separator-type 'wave)
-  (spaceline-all-the-icons-theme)
   (spaceline-toggle-all-the-icons-bookmark-on)
   (spaceline-toggle-all-the-icons-dedicated-on)
   (spaceline-toggle-all-the-icons-fullscreen-on)
@@ -36,16 +41,12 @@
   (spaceline-toggle-all-the-icons-hud-on)
   (spaceline-toggle-all-the-icons-battery-status-on)
   (spaceline-toggle-all-the-icons-weather-on)
-  (spaceline-toggle-all-the-icons-git-status-on)
-  (spaceline-toggle-all-the-icons-flycheck-status-on)
-  (spaceline-toggle-all-the-icons-flycheck-status-info-on)
+  (spaceline-toggle-all-the-icons-git-status)
+  (spaceline-toggle-all-the-icons-flycheck-status-off)
+  (spaceline-toggle-all-the-icons-flycheck-status-info-off)
   (spaceline-toggle-all-the-icons-multiple-cursors-on)
-  
-  (spaceline-define-segment buffer-encoding
-    "The full `buffer-file-coding-system'."
-    (format "%s" buffer-file-coding-system))
-  (spaceline-all-the-icons-theme 'buffer-encoding))
-
+  (spaceline-all-the-icons-theme 'buffer-encoding 'input-method)
+  )
 
 (provide 'init-mode-line-themes)
 ;;; init-mode-line-themes.el ends here

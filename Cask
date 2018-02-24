@@ -1,7 +1,7 @@
-;; (source "gnu" "http://elpa.emacs-china.org/gnu/")
-;; (source "melpa" "http://elpa.emacs-china.org/melpa/")
-;; (source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
-;; (source "org" "http://orgmode.org/elpa/")
+(source "gnu" "http://elpa.emacs-china.org/gnu/")
+(source "melpa" "http://elpa.emacs-china.org/melpa/")
+(source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
+(source "org" "http://elpa.emacs-china.org/org/")
 
 
 ;;------------------------------------------------
@@ -73,6 +73,7 @@
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
 ;; (depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
+(depends-on "bill-hlinum")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
@@ -93,7 +94,7 @@
 (depends-on "google-translate")
 
 ;;------------------------------------------------
-;;  major edit mode
+;; major edit mode
 ;;------------------------------------------------
 (depends-on "plantuml-mode")
 (depends-on "graphviz-dot-mode")
@@ -101,11 +102,13 @@
 (depends-on "gnuplot-mode")
 (depends-on "thrift")
 (depends-on "protobuf-mode")
-;; (depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
+;;(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
+(depends-on "crontab-mode")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
 (depends-on "csv-mode")
 (depends-on "csv-nav")
+(depends-on "yaml-mode")
 
 ;;------------------------------------------------
 ;;  git

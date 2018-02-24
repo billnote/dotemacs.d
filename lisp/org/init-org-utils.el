@@ -64,7 +64,7 @@
    (matlab . t)
    (C . t)
    (perl . t)
-   (sh . t)
+   (shell . t)
    (ditaa . t)
    (python . t)
    (haskell . t)

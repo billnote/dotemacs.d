@@ -40,10 +40,10 @@
 
 
 ;; crontab
-(use-package crontab-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.cron\\(tab\\)?\\'" . crontab-mode))
-  (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode)))
+;; (use-package crontab-mode
+;;   :config
+;;   (add-to-list 'auto-mode-alist '("\\.cron\\(tab\\)?\\'" . crontab-mode))
+;;   (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode)))
 
 
 ;; textile
@@ -67,6 +67,13 @@
   (add-auto-mode 'csv-mode "\\.[Cc][Ss][Vv]\\'")
   (setq csv-separators '("," ";" "|" " ")))
 
+
+;; yaml
+(use-package yaml-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
+  :bind (:map yaml-mode-map
+              ("\C-m" . newline-and-indent)))
 
 (provide 'init-edit-mode)
 ;;; init-edit-mode.el ends here

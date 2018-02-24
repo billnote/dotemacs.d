@@ -1,0 +1,3 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../resources/style/style.css" />
+#+INFOJS_OPT: view:info path:../resources/js/duoshuo_comment.js
+#+LINK_HOME: ../index.html
