@@ -72,8 +72,8 @@
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
-;; (depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
-(depends-on "bill-hlinum")
+(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
+;; (depends-on "bill-hlinum")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
@@ -102,7 +102,7 @@
 (depends-on "gnuplot-mode")
 (depends-on "thrift")
 (depends-on "protobuf-mode")
-;;(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
+(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
 (depends-on "crontab-mode")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
@@ -144,6 +144,7 @@
 (depends-on "aggressive-indent")
 (depends-on "paredit")
 (depends-on "imenu-list")
+(depends-on "lsp-mode")
 
 ;;------------------------------------------------
 ;; rust-lang mode
@@ -153,6 +154,7 @@
 (depends-on "racer")
 (depends-on "company-racer")
 (depends-on "flycheck-rust")
+(depends-on "lsp-rust")
 
 ;;------------------------------------------------
 ;;  go-lang mode

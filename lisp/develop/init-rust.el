@@ -23,5 +23,20 @@
   (setq company-tooltip-align-annotations t)
   :bind (("TAB" . company-indent-or-complete-common)))
 
+(use-package lsp-mode
+  :init
+  (add-hook 'prog-mode-hook 'lsp-mode)
+  :config
+  (use-package lsp-flycheck
+    :ensure f ; comes with lsp-mode
+    :after flycheck))
+
+(use-package lsp-rust
+  :after lsp-mode
+  :config
+  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
+  (add-hook 'rust-mode-hook #'lsp-rust-enable)
+  (add-hook 'rust-mode-hook #'flycheck-mode))
+
 (provide 'init-rust)
 ;;; init-rust.el ends here
