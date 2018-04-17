@@ -63,7 +63,6 @@
 ;; csv
 (use-package csv-mode
   :config
-  (use-package csv-nav)
   (add-auto-mode 'csv-mode "\\.[Cc][Ss][Vv]\\'")
   (setq csv-separators '("," ";" "|" " ")))
 

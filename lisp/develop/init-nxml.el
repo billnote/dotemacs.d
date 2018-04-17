@@ -38,10 +38,6 @@ indentation rules."
 ;;----------------------------------------------------------------------------
 ;; Integration with tidy for html + xml
 ;;----------------------------------------------------------------------------
-(use-package tidy
-  :config (add-hook 'nxml-mode-hook (lambda () (tidy-build-menu nxml-mode-map))))
-
-
 (defun sanityinc/tidy-buffer-xml (beg end)
   "Run \"tidy -xml\" on the region from BEG to END, or whole buffer."
   (interactive "r")

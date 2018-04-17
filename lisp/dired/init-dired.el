@@ -8,9 +8,6 @@
   (when gls (setq insert-directory-program gls)))
 
 (after-load 'dired
-  (use-package dired-sort
-    :config
-    (setq-default dired-dwim-target t))
   (use-package diredfl
     :config
     (diredfl-global-mode))

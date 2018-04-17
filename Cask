@@ -3,6 +3,10 @@
 (source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
 (source "org" "http://elpa.emacs-china.org/org/")
 
+;; (source melpa)
+;; (source melpa-stable)
+;; (source gnu)
+;; (source org)
 
 ;;------------------------------------------------
 ;;  package manager
@@ -10,7 +14,6 @@
 (depends-on "cask")
 (depends-on "pallet")
 (depends-on "use-package")
-
 
 (depends-on "exec-path-from-shell")
 (depends-on "session")
@@ -32,7 +35,6 @@
 ;;------------------------------------------------
 ;;  dired
 ;;------------------------------------------------
-(depends-on "dired-sort")
 (depends-on "diredfl")
 (depends-on "neotree")
 (depends-on "disable-mouse")
@@ -72,8 +74,7 @@
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
-(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode.git")
-;; (depends-on "bill-hlinum")
+(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode" :files ("*.el"))
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
@@ -103,11 +104,9 @@
 (depends-on "thrift")
 (depends-on "protobuf-mode")
 (depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
-(depends-on "crontab-mode")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
 (depends-on "csv-mode")
-(depends-on "csv-nav")
 (depends-on "yaml-mode")
 
 ;;------------------------------------------------
@@ -145,6 +144,7 @@
 (depends-on "paredit")
 (depends-on "imenu-list")
 (depends-on "lsp-mode")
+(depends-on "lsp-ui")
 
 ;;------------------------------------------------
 ;; rust-lang mode
@@ -210,7 +210,6 @@
 ;;------------------------------------------------
 (depends-on "web-mode")
 (depends-on "htmlize")
-(depends-on "tidy")
 (depends-on "tagedit")
 (depends-on "rainbow-mode")
 (depends-on "mmm-mode")
@@ -230,7 +229,6 @@
 ;;  org mode
 ;;------------------------------------------------
 (depends-on "org-plus-contrib")
-(depends-on "org-fstree")
 (depends-on "grab-mac-link")
 (depends-on "org-cliplink")
 

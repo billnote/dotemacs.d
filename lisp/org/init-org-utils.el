@@ -7,7 +7,6 @@
   :init
   (use-package gnuplot-mode)
   :config
-  (use-package org-fstree)
   (when mac?
     (use-package grab-mac-link)
     (use-package org-mac-iCal))

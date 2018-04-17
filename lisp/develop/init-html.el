@@ -3,9 +3,6 @@
 ;;; init html config
 ;;; Code:
 
-(use-package tidy
-  :config (add-hook 'html-mode-hook (lambda () (tidy-build-menu html-mode-map))))
-
 (use-package tagedit
   :config
   (after-load 'sgml-mode

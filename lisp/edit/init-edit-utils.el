@@ -98,8 +98,8 @@
   :config
   (hlinum-activate)
   (setq linum-highlight-in-all-buffersp t))
-;; (defvar linum-current-line 1 "Current line number.")
-;; (defvar linum-border-width 1 "Border width for linum.")
+(defvar linum-current-line 1 "Current line number.")
+(defvar linum-border-width 1 "Border width for linum.")
 
 ;; (defface linum-current-line
 ;;   `((t :inherit linum

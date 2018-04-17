@@ -23,20 +23,32 @@
   (setq company-tooltip-align-annotations t)
   :bind (("TAB" . company-indent-or-complete-common)))
 
-(use-package lsp-mode
-  :init
-  (add-hook 'prog-mode-hook 'lsp-mode)
-  :config
-  (use-package lsp-flycheck
-    :ensure f ; comes with lsp-mode
-    :after flycheck))
+;; (use-package lsp-mode
+;;   :init
+;;   (add-hook 'prog-mode-hook 'lsp-mode)
+;;   :config
+;;   (require 'lsp-imenu)
+;;   (add-hook 'lsp-after-open-hook #'lsp-enable-imenu)
+;;   (use-package lsp-ui
+;;     :ensure f ; comes with lsp-mode
+;;     :after flycheck
+;;     :config
+;;     (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+;;   (add-hook 'prog-major-mode #'lsp-prog-major-mode-enable))
 
-(use-package lsp-rust
-  :after lsp-mode
-  :config
-  (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
-  (add-hook 'rust-mode-hook #'lsp-rust-enable)
-  (add-hook 'rust-mode-hook #'flycheck-mode))
+;; (with-eval-after-load 'lsp-mode
+;;   (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
+;;   (require 'lsp-rust))
+;; (add-hook 'rust-mode-hook #'lsp-rust-enable)
+;; (add-hook 'rust-mode-hook #'flycheck-mode)
+
+;; (use-package lsp-rust
+;;   :defer t
+;;   :after lsp-mode
+;;   :config
+;;   (setq lsp-rust-rls-command '("rustup" "run" "nightly" "rls"))
+;;   (add-hook 'rust-mode-hook #'lsp-rust-enable)
+;;   (add-hook 'rust-mode-hook #'flycheck-mode))
 
 (provide 'init-rust)
 ;;; init-rust.el ends here
