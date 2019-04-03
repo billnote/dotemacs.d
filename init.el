@@ -92,6 +92,9 @@
 (require 'init-org-publish)
 (require 'init-org-to-pdf)
 
+;; shell
+(require 'init-multi-term)
+
 ;; blog
 (require 'init-wp-blog)
 
@@ -101,6 +104,10 @@
 
 ;; translate
 (require 'init-translate)
+
+;; scrum
+(require 'scrum)
+(require 'org-gantt)
 
 
 

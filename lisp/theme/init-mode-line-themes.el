@@ -2,7 +2,9 @@
 ;;; Commentary:
 ;;; init mode line themes
 ;;; Code:
-(use-package spaceline :demand t)
+(use-package spaceline
+  :pin melpa-stable
+  :demand t)
 (use-package spaceline-config
   :ensure nil
   :after spaceline
@@ -20,11 +22,11 @@
   (use-package fancy-battery
     :config
     (fancy-battery-mode))
-  (use-package yahoo-weather
+  (use-package he-weather
     :config
-    (setq yahoo-weather-location "上海")
-    (setq yahoo-weather-update-interval 7200)
-    (yahoo-weather-mode))
+    (setq he-weather-location "上海")
+    (setq he-weather-update-interval 7200)
+    (he-weather-mode))
   :config
   (spaceline-all-the-icons-theme)
   (spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching

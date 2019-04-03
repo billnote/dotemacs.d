@@ -111,16 +111,6 @@
 ;; ----------------------------------------------------------------------------
 (setq load-prefer-newer t)
 
-;; ----------------------------------------------------------------------------
-;; Highlight current sexp
-;; ----------------------------------------------------------------------------
-;; Prevent flickery behaviour due to hl-sexp-mode unhighlighting before each command
-(use-package hl-sexp
-  :config
-  (defadvice hl-sexp-mode (after unflicker (&optional turn-on) activate)
-    (when turn-on
-      (remove-hook 'pre-command-hook #'hl-sexp-unhighlight))))
-
 
 ;;; Support byte-compilation in a sub-process, as
 ;;; required by highlight-cl

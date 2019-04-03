@@ -54,13 +54,14 @@
 ;; 导出Beamer的设置
 ;; allow for export=>beamer by placing #+LaTeX_CLASS: beamer in org files
 ;;-----------------------------------------------------------------------------
-(add-to-list 'org-latex-classes '("beamer"
-                                  "{{{cn-beamer-class}}}"
+(add-to-list 'org-latex-classes '("cn-beamer"
+                                  "{{{cn-beamer-class}}}
+                                   [NO-DEFAULT-PACKAGES]
+                                   [NO-PACKAGES]"
                                   ("\\section{%s}" . "\\section*{%s}")
-                                  ("\\begin{frame}[fragile]\\frametitle{%s}"
-                                   "\\end{frame}"
-                                   "\\begin{frame}[fragile]\\frametitle{%s}"
-                                   "\\end{frame}")))
+                                  ("\\subsection{%s}" . "\\subsection*{%s}")
+                                  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+                                  ))
 
 (defun replace-cn-article-class (contents backend info)
   "Replace cn article marco.
@@ -80,7 +81,7 @@ INFO info."
   (interactive)
   (when  (org-export-derived-backend-p backend 'latex)
     (when (string-match "{{{cn-beamer-class}}}" contents)
-      (replace-regexp-in-string "{{{cn-beamer-class}}}" (f-read-text cn-article-class-file) contents))))
+      (replace-regexp-in-string "{{{cn-beamer-class}}}" (f-read-text cn-beamer-class-file) contents))))
 
 (add-to-list 'org-export-filter-final-output-functions 'replace-cn-article-class)
 (add-to-list 'org-export-filter-final-output-functions 'replace-cn-beamer-class)

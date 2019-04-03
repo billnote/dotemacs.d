@@ -40,10 +40,11 @@
 
 
 ;; crontab
-(use-package crontab-mode
-  :config
-  (add-to-list 'auto-mode-alist '("\\.cron\\(tab\\)?\\'" . crontab-mode))
-  (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode)))
+
+;; (use-package crontab-mode
+;;   :config
+;;   (add-to-list 'auto-mode-alist '("\\.cron\\(tab\\)?\\'" . crontab-mode))
+;;   (add-to-list 'auto-mode-alist '("cron\\(tab\\)?\\."    . crontab-mode)))
 
 
 ;; textile
@@ -55,6 +56,11 @@
 
 ;; markdown
 (use-package markdown-mode
+  :ensure t
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown")
   :config
   (after-load 'whitespace-cleanup-mode
     (push 'markdown-mdoe whitespace-cleanup-mode-ignore-modes)))
@@ -73,6 +79,13 @@
   (add-to-list 'auto-mode-alist '("\\.yaml\\'" . yaml-mode))
   :bind (:map yaml-mode-map
               ("\C-m" . newline-and-indent)))
+
+
+;; dockerfile
+(use-package dockerfile-mode
+  :config
+  (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
+
 
 (provide 'init-edit-mode)
 ;;; init-edit-mode.el ends here

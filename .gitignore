@@ -52,3 +52,5 @@ my-password.el.gpg
 emojis
 .DS_Store
 /cnfonts
+abbrev_defs
+/transient

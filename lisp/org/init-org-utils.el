@@ -217,5 +217,11 @@
 (setq org-time-clocksum-format
       '(:hours "%d" :require-hours t :minutes ":%02d" :require-minutes t))
 
+
+
+;;; org task estimate with column mode
+
+;; Set default column view headings: Task Effort Clock_Summary
+(setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimated Effort){:} %10CLOCKSUM")
 (provide 'init-org-utils)
 ;;; init-org-utils.el ends here

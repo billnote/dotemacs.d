@@ -120,6 +120,14 @@
       {]}{{{\\color{delim}{]}}}}{1},
 }
 
+\\lstdefinelanguage{yaml}{ % support yaml
+    keywords={false,true},
+    alsoletter=0123456789.,
+    morecomment=[l]\\#,
+    morecomment=[s]{/*}{*/},
+    morestring=[s]{"}{"},
+}
+
 \\lstdefinelanguage{js}{ % support js
     morekeywords={typeof,new,true,false,catch,function,return,null,catch,switch,var,if,in,while,do,else,case,break},
     morecomment=[l]//,

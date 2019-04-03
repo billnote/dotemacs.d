@@ -3,10 +3,10 @@
 (source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
 (source "org" "http://elpa.emacs-china.org/org/")
 
-;; (source melpa)
-;; (source melpa-stable)
-;; (source gnu)
-;; (source org)
+;;(source melpa)
+;;(source melpa-stable)
+;;(source gnu)
+;;(source org)
 
 ;;------------------------------------------------
 ;;  package manager
@@ -74,7 +74,7 @@
 (depends-on "indent-guide")
 ;; (depends-on "nlinum-relative")
 ;; (depends-on "nlinum")
-(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode" :files ("*.el"))
+(depends-on "hlinum" :git "https://github.com/billnote/hlinum-mode")
 (depends-on "rainbow-delimiters")
 (depends-on "undo-tree")
 (depends-on "multiple-cursors")
@@ -93,6 +93,7 @@
 (depends-on "names")
 (depends-on "chinese-word-at-point")
 (depends-on "google-translate")
+(depends-on "dockerfile-mode")
 
 ;;------------------------------------------------
 ;; major edit mode
@@ -103,7 +104,7 @@
 (depends-on "gnuplot-mode")
 (depends-on "thrift")
 (depends-on "protobuf-mode")
-(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
+;;(depends-on "crontab-mode" :git "https://github.com/emacsattic/crontab-mode.git")
 (depends-on "textile-mode")
 (depends-on "markdown-mode")
 (depends-on "csv-mode")
@@ -175,7 +176,7 @@
 (depends-on "hippie-expand-slime")
 (depends-on "slime-company")
 (depends-on "auto-compile")
-(depends-on "hl-sexp")
+;;(depends-on "hl-sexp"  :git "https://github.com/billnote/highlight-sexp.git")
 (depends-on "immortal-scratch")
 (depends-on "eldoc-eval")
 (depends-on "cl-lib-highlight")
@@ -247,11 +248,13 @@
 (depends-on "all-the-icons")
 (depends-on "powerline")
 (depends-on "spaceline")
-(depends-on "spaceline-all-the-icons")
+(depends-on "spaceline-all-the-icons" :git "https://github.com/billnote/spaceline-all-the-icons.el.git")
 (depends-on "fancy-battery")
-(depends-on "yahoo-weather")
+(depends-on "he-weather" :git "https://github.com/billnote/he-weather-mode.git")
 
 ;;------------------------------------------------
 ;;  osx
 ;;------------------------------------------------
 (depends-on "osx-location")
+
+(depends-on "multi-term")

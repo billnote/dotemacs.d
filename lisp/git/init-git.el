@@ -30,15 +30,15 @@
 
 
 ;; init git gutter
-(use-package git-gutter
-  :config
-  (global-git-gutter-mode t)
-  (git-gutter:linum-setup)
-  (custom-set-variables
-   '(git-gutter:window-width 2)
-   '(git-gutter:modified-sign "☁")
-   '(git-gutter:added-sign "☀")
-   '(git-gutter:deleted-sign "☂")))
+;; (use-package git-gutter
+;;   :config
+;;   (global-git-gutter-mode t)
+;;   (git-gutter:linum-setup)
+;;   (custom-set-variables
+;;    '(git-gutter:window-width 2)
+;;    '(git-gutter:modified-sign "☁")
+;;    '(git-gutter:added-sign "☀")
+;;    '(git-gutter:deleted-sign "☂")))
 
 
 ;; init github
@@ -47,7 +47,7 @@
   :config (add-hook 'prog-mode-hook 'bug-reference-prog-mode))
 (use-package github-clone)
 (use-package github-issues)
-(use-package magit-gh-pulls)
+;;(use-package magit-gh-pulls)
 
 (provide 'init-git)
 ;;; init-git.el ends here
