@@ -1,4 +1,4 @@
-;;; init-windows.el --- Summary
+;;; init-windows.el --- Working with windows within frames -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; init windows conifg
 ;;; Code:
@@ -14,13 +14,15 @@
 ;;----------------------------------------------------------------------------
 ;; When splitting window, show (other-buffer) in the new window
 ;;----------------------------------------------------------------------------
-(eval-when-compile (require 'cl))
 (defun split-window-func-with-other-buffer (split-function)
-  (lexical-let ((s-f split-function))
-    (lambda ()
-      (interactive)
-      (funcall s-f)
-      (set-window-buffer (next-window) (other-buffer)))))
+  (lambda (&optional arg)
+    "Split this window and switch to the new window unless ARG is provided."
+    (interactive "P")
+    (funcall split-function)
+    (let ((target-window (next-window)))
+      (set-window-buffer target-window (other-buffer))
+      (unless arg
+        (select-window target-window)))))
 
 (global-set-key (kbd "C-x 2") (split-window-func-with-other-buffer 'split-window-vertically))
 (global-set-key (kbd "C-x 3") (split-window-func-with-other-buffer 'split-window-horizontally))
@@ -39,16 +41,22 @@
 ;; Rearrange split windows
 ;;----------------------------------------------------------------------------
 (defun split-window-horizontally-instead ()
+  "Kill any other windows and re-split such that the current window is on the top half of the frame."
   (interactive)
-  (save-excursion
+  (let ((other-buffer (and (next-window) (window-buffer (next-window)))))
     (delete-other-windows)
-    (funcall (split-window-func-with-other-buffer 'split-window-horizontally))))
+    (split-window-horizontally)
+    (when other-buffer
+      (set-window-buffer (next-window) other-buffer))))
 
 (defun split-window-vertically-instead ()
+  "Kill any other windows and re-split such that the current window is on the left half of the frame."
   (interactive)
-  (save-excursion
+  (let ((other-buffer (and (next-window) (window-buffer (next-window)))))
     (delete-other-windows)
-    (funcall (split-window-func-with-other-buffer 'split-window-vertically))))
+    (split-window-vertically)
+    (when other-buffer
+      (set-window-buffer (next-window) other-buffer))))
 
 (global-set-key (kbd "C-x |") 'split-window-horizontally-instead)
 (global-set-key (kbd "C-x _") 'split-window-vertically-instead)
@@ -85,7 +93,10 @@ Call a second time to restore the original window configuration."
 
 
 (unless (memq window-system '(nt w32))
-  (windmove-default-keybindings 'control))
+  (use-package windswap
+    :init
+    (add-hook 'after-init-hook (apply-partially 'windmove-default-keybindings 'control))
+    (add-hook 'after-init-hook (apply-partially 'windswap-default-keybindings 'shift 'control))))
 
 (provide 'init-windows)
 ;;; init-windows.el ends here

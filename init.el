@@ -7,7 +7,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
 
 (require 'cask "/usr/local/share/emacs/site-lisp/cask/cask.el")
 (cask-initialize)
@@ -25,7 +25,7 @@
        '(progn ,@body))))
 
 ;;----------------------------------------------------------------------------
-;; Handier way to add modes to auto-mode-alist
+;;Handier way to add modes to auto-mode-alist
 ;;----------------------------------------------------------------------------
 (defun add-auto-mode (mode &rest patterns)
   "Add entries to `auto-mode-alist' to use `MODE' for all given file `PATTERNS'."
@@ -39,28 +39,28 @@
     (buffer-string)))
 
 
-;; load path
+;;load path
 (let ((default-directory  "~/.emacs.d/lisp/"))
   (normal-top-level-add-to-load-path '("."))
   (normal-top-level-add-subdirs-to-load-path))
 
 
-;; custom config
+;;custom config
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq network-security-level 'low)
 
-;; shell path
+;;shell path
 (require 'init-exec-path)
 
-;; session
+;;session
 (require 'init-sessions)
 
-;; search
+;;search
 (require 'init-ivy)
 (require 'init-anzu)
 (require 'init-dash)
 
-;; frame
+;;frame
 (require 'init-frame)
 (require 'init-windows)
 (require 'init-ibuffer)

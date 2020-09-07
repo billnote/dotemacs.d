@@ -28,7 +28,7 @@
 ;; provides functions that extend org-mode which allow it to generate
 ;; some reports.
 
-(require 'cl)
+(require 'cl-lib)
 (require 'gnuplot)
 
 (defgroup scrum nil

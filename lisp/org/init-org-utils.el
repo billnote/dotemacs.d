@@ -23,17 +23,13 @@
 
 ;;; capture
 (setq org-capture-templates
-      '(("u" "UnionPay AdServer" entry (file+headline "~/.todo/projects.org" "Yellowstone AdServer") "* TODO %? %^g\n %i" :prepend t)
-        ("p" "PMP AdServer" entry (file+headline "~/.todo/projects.org" "PMP AdServer") "* TODO %? %^g\n %i")
-        ("w" "PMP Web" entry (file+headline "~/.todo/projects.org" "PMP Web") "* TODO %? %^g\n %i")
-        ("t" "Tracking Server" entry (file+headline "~/.todo/projects.org" "Tracking Server") "* TODO %? %^g\n %i")
-        ("c" "Cookie Mapping" entry (file+headline "~/.todo/projects.org" "Cookie Mapping Server") "* TODO %? %^g\n %i")
-        ("r" "Report" entry (file+headline "~/.todo/projects.org" "Report") "* TODO %? %^g\n %i")
-        ("m" "UPM Access" entry (file+headline "~/.todo/projects.org" "UPM Access") "* TODO %? %^g\n %i")
+      '(("g" "game server" entry (file+headline "~/.todo/projects.org" "Game Server") "* TODO %? %^g\n %i")
+        ("m" "mobile iu" entry (file+headline "~/.todo/projects.org" "Mobile IU") "* TODO %? %^g\n %i")
         ("o" "Other Task" entry (file+headline "~/.todo/projects.org" "Other Task") "* TODO %? %^g\n %i")
         ("i" "Idea" entry (file+headline "~/.todo/task.org" "Ideas") "* TODO %? %^g\n %i" :prepend t)
         ("j" "Task" entry (file+headline "~/.todo/task.org" "Tasks") "* TODO %? %^g\n %i" :prepend t)
         ("n" "Note" entry (file+headline "~/.todo/note.org" "Notes") "* %U %?\n\n %i" :prepend t :empty-lines 1)
+        ("t" "think" entry (file+headline "~/.todo/think.org" "Think") "* %U %?\n\n %i" :prepend t :empty-lines 1)
         ("a" "Account" table-line (file+headline "~/.account/.account.org.gpg" "bill accounts") "| %? | %? | %? | %U |")))
 
 

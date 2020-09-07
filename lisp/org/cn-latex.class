@@ -123,8 +123,7 @@
 \\lstdefinelanguage{yaml}{ % support yaml
     keywords={false,true},
     alsoletter=0123456789.,
-    morecomment=[l]\\#,
-    morecomment=[s]{/*}{*/},
+    morecomment=[l]\\#,    
     morestring=[s]{"}{"},
 }
 

@@ -54,7 +54,7 @@
 (depends-on "fullframe")
 (depends-on "switch-window")
 (depends-on "ibuffer-vc")
-
+(depends-on "windswap")
 ;;------------------------------------------------
 ;;  search
 ;;------------------------------------------------
@@ -155,7 +155,6 @@
 (depends-on "racer")
 (depends-on "company-racer")
 (depends-on "flycheck-rust")
-(depends-on "lsp-rust")
 
 ;;------------------------------------------------
 ;;  go-lang mode
@@ -202,8 +201,6 @@
 (depends-on "xref-js2")
 (depends-on "js-comint")
 (depends-on "skewer-mode")
-(depends-on "tern")
-(depends-on "company-tern")
 (depends-on "mocha")
 
 ;;------------------------------------------------

@@ -1,65 +1,79 @@
-;;; init-ivy.el --- Summary
+;;; init-ivy.el --- Use ivy for minibuffer completion and more -*- lexical-binding: t -*-
 ;;; Commentary:
-;;; init ivy config
 ;;; Code:
 
 (use-package ivy
   :diminish ivy-mode
   :config
+  (add-hook 'after-init-hook 'ivy-mode)
   (setq-default ivy-use-virtual-buffers t
                 ivy-virtual-abbreviate 'fullpath
                 ivy-count-format ""
                 projectile-completion-system 'ivy
-                ivy-initial-inputs-alist
-                '((man . "^")
-                  (woman . "^")))
-  (defun sanityinc/enable-ivy-flx-matching ()
-    "Make `ivy' matching work more like IDO."
-    (interactive)
-    (use-package flx
-      :config
-      (setq-default ivy-re-builders-alist
-        	    '((t . ivy--regex-fuzzy)))))
-  (add-hook 'after-init-hook
-            (lambda ()
-              (when (bound-and-true-p ido-ubiquitous-mode)
-                (ido-ubiquitous-mode -1))
-              (when (bound-and-true-p ido-mode)
-                (ido-mode -1))
-              (ivy-mode 1)))
-  :bind (:map ivy-minibuffer-map
-              ("RET" . ivy-alt-done)
-              ("<up>" . ivy-previous-line-or-history)
-              ([("C-j" "C-RET")] . ivy-immediate-done)
-              ))
-
-(use-package ivy-historian
-  :config (add-hook 'after-init-hook (lambda () (ivy-historian-mode t))))
+                ivy-magic-tilde nil
+                ivy-dynamic-exhibit-delay-ms 150
+                ivy-use-selectable-prompt t)
+  :bind (
+         :map ivy-minibuffer-map
+         ("RET" . ivy-alt-done)
+         ([("C-j" "C-RET")] . ivy-immediate-done)
+         ("<up>" . ivy-previous-line-or-history)
+         ("<down>" . ivy-next-line-or-history)
+         :map ivy-occur-grep-mode-map
+         ("C-c C-q" . ivy-wgrep-change-to-wgrep-mode))
+  :config
+  (use-package ivy-rich
+    :init
+    (setq ivy-virtual-abbreviate 'abbreviate
+          ivy-rich-switch-buffer-align-virtual-buffer nil
+          ivy-rich-path-style 'abbrev)
+    (add-hook 'ivy-mode-hook (lambda () (ivy-rich-mode ivy-mode)))))
 
 (use-package counsel
   :diminish counsel-mode
-  :init (setq-default counsel-mode-override-describe-bindings t)
-  :config
+  :init
   (add-hook 'after-init-hook 'counsel-mode)
-  (when (executable-find "ag")
-    (use-package projectile
-      :init
-      (defun sanityinc/counsel-ag-project (initial-input)
-        "Search using `counsel-ag' from the project root for INITIAL-INPUT."
-        (interactive (list (thing-at-point 'symbol)))
-        (counsel-ag initial-input (condition-case err
-                                      (projectile-project-root)
-                                    (error default-directory))))
-      :bind (("M-?" . sanityinc/counsel-ag-project)))))
+  (setq-default counsel-mode-override-describe-bindings t
+                ivy-initial-inputs-alist
+                '((Man-completion-table . "^")
+                  (woman . "^")))
+  :config
+  (use-package projectile
+    :init
+    (let ((search-function
+           (cond
+            ((executable-find "rg") 'counsel-rg)
+            ((executable-find "ag") 'counsel-ag)
+            ((executable-find "pt") 'counsel-pt)
+            ((executable-find "ack") 'counsel-ack))))
+      (when search-function
+        (defun sanityinc/counsel-search-project (initial-input &optional use-current-dir)
+          "Search using `counsel-rg' or similar from the project root for INITIAL-INPUT.
+If there is no project root, or if the prefix argument
+USE-CURRENT-DIR is set, then search from the current directory
+instead."
+          (interactive (list (let ((sym (thing-at-point 'symbol)))
+                               (when sym (regexp-quote sym)))
+                             current-prefix-arg))
+          (let ((current-prefix-arg)
+                (dir (if use-current-dir
+                         default-directory
+                       (condition-case err
+                           (projectile-project-root)
+                         (error default-directory)))))
+            (funcall search-function initial-input dir)))))
+    :config
+    (add-to-list 'ivy-height-alist (cons 'counsel-ag 20))
+    :bind (("M-?" . sanityinc/counsel-search-project))))
 
 (use-package swiper
+  :bind (
+         :map ivy-mode-map
+         ("M-s /" . swiper-thing-at-point)))
+
+(use-package ivy-xref
   :init
-  (defun sanityinc/swiper-at-point (sym)
-    "Use `swiper' to search for the symbol at point."
-    (interactive (list (thing-at-point 'symbol)))
-    (swiper sym))
-  :bind (:map ivy-mode-map
-         ("M-s /" . sanityinc/swiper-at-point)))
+  (setq xref-show-xrefs-function 'ivy-xref-show-xrefs))
 
 (provide 'init-ivy)
 ;;; init-ivy.el ends here

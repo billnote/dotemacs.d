@@ -25,7 +25,7 @@
   (use-package he-weather
     :config
     (setq he-weather-location "上海")
-    (setq he-weather-update-interval 7200)
+    (setq he-weather-update-interval 3600)
     (he-weather-mode))
   :config
   (spaceline-all-the-icons-theme)

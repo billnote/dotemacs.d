@@ -15,7 +15,7 @@
 
 ;; Need to first remove from list if present, since elpa adds entries too, which
 ;; may be in an arbitrary order
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 (setq auto-mode-alist (cons `("\\.\\(js\\|es6\\)\\(\\.erb\\)?\\'" . ,preferred-javascript-mode)
                             (loop for entry in auto-mode-alist
                                   unless (eq preferred-javascript-mode (cdr entry))
@@ -26,7 +26,7 @@
 
 (use-package js2-mode
   :init
-  (setq-default js2-basic-offset 2
+  (setq-default js-indent-level 2
                 js2-bounce-indent-p nil)
   :config
   ;; Disable js2 mode's syntax error highlighting by default...
@@ -78,15 +78,6 @@
   (add-hook 'skewer-mode-hook
             (lambda () (inferior-js-keys-mode -1))))
 
-
-(use-package tern
-  :config
-  (use-package company-tern)
-  :config
-  (add-to-list 'company-backends 'company-tern)
-  (setq company-tern-meta-as-single-line t)
-  (after-load 'context-coloring
-    '(tern-context-coloring-setup)))
 
 
 ;; mocha test
