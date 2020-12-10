@@ -1,4 +1,4 @@
-\\documentclass[presentation]{beamer}
+\\documentclass[aspectratio=169]{beamer}
 \\usepackage[utf8]{inputenc}
 \\usepackage[T1]{fontenc}
 \\usepackage{graphicx}
@@ -21,8 +21,8 @@
 \\usepackage{verbatim}
 \\usepackage{listings}
 \\setmainfont{Times New Roman}
-\\setCJKmainfont{PingFang SC}%中文字体
-\\setCJKmonofont{PingFang SC}
-\\usetheme{CambridgeUS}
-\\usecolortheme{beaver}
+\\setCJKmainfont{Songti SC}%中文字体
+\\setCJKmonofont{Songti SC}
+\\usetheme{Bilibili}
+\\usecolortheme{bilibili}
 \\usefonttheme[onlylarge]{structurebold}

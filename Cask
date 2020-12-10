@@ -146,15 +146,18 @@
 (depends-on "imenu-list")
 (depends-on "lsp-mode")
 (depends-on "lsp-ui")
+(depends-on "dap-mode")
 
 ;;------------------------------------------------
 ;; rust-lang mode
 ;;------------------------------------------------
 (depends-on "rust-mode")
+(depends-on "rustic")
 (depends-on "cargo")
 (depends-on "racer")
-(depends-on "company-racer")
 (depends-on "flycheck-rust")
+(depends-on "cargo")
+(depends-on "toml-mode")
 
 ;;------------------------------------------------
 ;;  go-lang mode

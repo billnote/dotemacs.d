@@ -24,7 +24,7 @@
 ;;; capture
 (setq org-capture-templates
       '(("g" "game server" entry (file+headline "~/.todo/projects.org" "Game Server") "* TODO %? %^g\n %i")
-        ("m" "mobile iu" entry (file+headline "~/.todo/projects.org" "Mobile IU") "* TODO %? %^g\n %i")
+        ("m" "bilibili ad" entry (file+headline "~/.todo/projects.org" "bilibili Ad") "* TODO %? %^g\n %i")
         ("o" "Other Task" entry (file+headline "~/.todo/projects.org" "Other Task") "* TODO %? %^g\n %i")
         ("i" "Idea" entry (file+headline "~/.todo/task.org" "Ideas") "* TODO %? %^g\n %i" :prepend t)
         ("j" "Task" entry (file+headline "~/.todo/task.org" "Tasks") "* TODO %? %^g\n %i" :prepend t)
@@ -47,9 +47,8 @@
          ((tags-todo "+PRIORITY=\"C\""))
          ((org-agenda-compact-blocks t)))
         ))
-(setq org-plantuml-jar-path "~/.emacs.d/tools/plantuml/plantuml.jar")
-(setq org-ditaa-jar-path "~/.emacs.d/tools/ditaa/ditaa.jar")
 
+(setq org-ditaa-jar-path "~/.emacs.d/tools/ditaa/ditaa.jar")
 
 ;; 各种Babel语言支持
 (org-babel-do-load-languages

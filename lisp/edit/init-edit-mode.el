@@ -33,9 +33,18 @@
 
 
 ;; plantuml
+
 (use-package plantuml-mode
+  :after org
   :config
-  (setq plantuml-jar-path "~/.emacs.d/tools/plantuml/plantuml.jar")
+  (let ((url "https://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
+    (setq plantuml-jar-path (expand-file-name "plantuml.jar" "~/.emacs.d/tools/plantuml/"))
+    (setq org-plantuml-jar-path plantuml-jar-path)
+    (unless (file-exists-p plantuml-jar-path)
+      (url-copy-file url plantuml-jar-path)))
+  (setq plantuml-default-exec-mode 'jar)
+  (add-to-list
+   'org-src-lang-modes '("plantuml" . plantuml))  
   (add-to-list 'auto-mode-alist '("\\.uml\\'" . plantuml-mode)))
 
 

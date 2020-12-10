@@ -68,6 +68,7 @@
 ;; edit tools
 (require 'init-edit-utils)
 (require 'init-edit-mode)
+(require 'init-tools)
 
 ;; command
 (require 'init-command)

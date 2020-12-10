@@ -1,0 +1,26 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: document template
+# key: docb
+# binding: direct-keybinding
+# --
+
+#+TITLE: $1
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./resources/style/style.css" />
+#+LATEX_CLASS: cn-article
+#+LATEX_HEADER: \fancyhead[L]{\includegraphics[scale=0.25]{./resources/icon/bilibili-douga.png}}
+#+LATEX_HEADER: \fancyhead[R]{$1}
+#+LATEX_HEADER: \fancyhead[C]{\rightmark}
+#+LATEX_HEADER: \fancyfoot[C]{Copyright © bilibili}
+#+LATEX_HEADER: \fancyfoot[R]{\thepage}
+#+LATEX_HEADER: \tcbset{enhanced,fonttitle=\bfseries\large,fontupper=\normalsize\sffamily,
+#+LATEX_HEADER: colback=bilibluesub,colframe=biliblue,colbacktitle=biliblue,
+#+LATEX_HEADER: coltitle=black,center title}
+#+OPTIONS: toc:5
+#+OPTIONS: ^:{}
+#+AUTHOR: 黄圣彪
+#+EMAIL: huangshengbiao@bilibili.com
+
+#+LATEX: \newpage
+#+LATEX: \rowcolors{1}{bilibluesub}{biligray} % table 行颜色设置
+
+$2
