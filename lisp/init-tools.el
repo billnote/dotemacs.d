@@ -37,6 +37,10 @@
       (clipboard-kill-ring-save (point-min) (point-max)))
     ciphertext))
 
+(defun bh/add-variables-to-list (l &rest vars)
+  "Add VARS to the list L."
+  (while vars
+    (add-to-list l (pop vars))))
 
 (provide 'init-tools)
 ;;; init-tools.el ends here
