@@ -61,6 +61,10 @@
                    (abbreviate-file-name (buffer-file-name))
                  "%b"))))
 
+;; (setq frame-title-format
+;;       (list (format "%s %%S: %%j " (system-name))
+;;             '(buffer-file-name "%f" (dired-directory dired-directory "%b"))))
+
 ;; Non-zero values for `line-spacing' can mess up ansi-term and co,
 ;; so we zero it explicitly in those cases.
 (add-hook 'term-mode-hook

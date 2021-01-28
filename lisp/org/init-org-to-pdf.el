@@ -112,6 +112,17 @@ INFO info."
            (replace-regexp-in-string "{{{cn-beamer-class}}}" (f-read-text cn-beamer-class-file) contents))
           )))
 
+(defun bn/replace-cn-class-contents (contents &rest valpair)
+  "Replace marco, CONTENTS source string, VALPAIR marco and class file pair."
+  (while valpair
+    (let ((val (pop valpair)))
+      (bh/replace-contents (car val) (cdr val) contents))))
+
+(defun bh/replace-contents (macro class-file contents)
+  "Use CLASS-FILE content replace MACRO in the CONTENTS."
+  (when (string-match macro contents)
+    (replace-regexp-in-string macro (f-read-text class-file) contents)))
+
 (add-to-list 'org-export-filter-final-output-functions 'replace-cn-class)
 
 (setq ps-paper-type 'a4

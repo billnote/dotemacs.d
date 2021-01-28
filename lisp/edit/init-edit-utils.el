@@ -370,5 +370,63 @@ With arg N, insert N newlines."
   :config (global-whitespace-cleanup-mode t)
   :bind (([remap just-one-space] . cycle-spacing)))
 
+
+;;; colored hex color spec
+;;; from http://ergoemacs.org/emacs/emacs_CSS_colors.html
+
+(defun xah-syntax-color-hex ()
+  "Syntax color text of the form 「#ff1100」 and 「#abc」 in current buffer.
+URL `http://ergoemacs.org/emacs/emacs_CSS_colors.html'
+Version 2017-03-12"
+  (interactive)
+  (font-lock-add-keywords
+   nil
+   '(("#[[:xdigit:]]\\{3\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background
+                      (let* (
+                             (ms (match-string-no-properties 0))
+                             (r (substring ms 1 2))
+                             (g (substring ms 2 3))
+                             (b (substring ms 3 4)))
+                        (concat "#" r r g g b b))))))
+     ("#[[:xdigit:]]\\{6\\}"
+      (0 (put-text-property
+          (match-beginning 0)
+          (match-end 0)
+          'face (list :background (match-string-no-properties 0)))))))
+  (font-lock-flush))
+
+(defun xah-syntax-color-hsl ()
+  "Syntax color CSS's HSL color spec eg 「hsl(0,90%,41%)」 in current buffer.
+URL `http://ergoemacs.org/emacs/emacs_CSS_colors.html'
+Version 2017-02-02"
+  (interactive)
+  (require 'color)
+  (font-lock-add-keywords
+   nil
+   '(("hsl( *\\([0-9]\\{1,3\\}\\) *, *\\([0-9]\\{1,3\\}\\)% *, *\\([0-9]\\{1,3\\}\\)% *)"
+      (0 (put-text-property
+          (+ (match-beginning 0) 3)
+          (match-end 0)
+          'face
+          (list
+           :background
+           (concat
+            "#"
+            (mapconcat
+             'identity
+             (mapcar
+              (lambda (x) (format "%02x" (round (* x 255))))
+              (color-hsl-to-rgb
+               (/ (string-to-number (match-string-no-properties 1)) 360.0)
+               (/ (string-to-number (match-string-no-properties 2)) 100.0)
+               (/ (string-to-number (match-string-no-properties 3)) 100.0)))
+             "" )) ;  "#00aa00"
+           ))))))
+  (font-lock-flush))
+
 (provide 'init-edit-utils)
 ;;; init-edit-utils.el ends here

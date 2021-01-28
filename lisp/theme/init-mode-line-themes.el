@@ -26,8 +26,10 @@
     :config
     (setq he-weather-location "上海")
     (setq he-weather-update-interval 3600)
-    (he-weather-mode))
+    (he-weather-mode)
+    )
   :config
+  (setq spaceline-all-the-icons-hide-long-buffer-path t)
   (spaceline-all-the-icons-theme)
   (spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching
   (spaceline-all-the-icons--setup-package-updates) ;; Enable package update indicator
@@ -41,7 +43,7 @@
   (spaceline-toggle-all-the-icons-buffer-position-on)
   (spaceline-toggle-all-the-icons-narrowed-on)
   (spaceline-toggle-all-the-icons-hud-on)
-  (spaceline-toggle-all-the-icons-battery-status-on)
+  (spaceline-toggle-all-the-icons-battery-status-off)
   (spaceline-toggle-all-the-icons-weather-on)
   (spaceline-toggle-all-the-icons-git-status)
   (spaceline-toggle-all-the-icons-flycheck-status-off)

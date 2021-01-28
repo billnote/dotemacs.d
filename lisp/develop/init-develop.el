@@ -17,6 +17,7 @@
 (require 'init-html)
 (require 'init-css)
 (require 'init-sql)
+(require 'init-lua)
 
 (provide 'init-develop)
 ;;; init-develop.el ends here

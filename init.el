@@ -49,7 +49,6 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq network-security-level 'low)
 
-
 ;;shell path
 (require 'init-exec-path)
 
@@ -95,6 +94,7 @@
 (require 'init-org-utils)
 (require 'init-org-publish)
 (require 'init-org-to-pdf)
+(require 'ox-confluence)
 
 ;; shell
 (require 'init-multi-term)
@@ -131,6 +131,8 @@
 ;;----------------------------------------------------------------------------
 (when (file-exists-p custom-file)
   (load custom-file))
+
+(toggle-frame-fullscreen)
 
 (provide 'init)
 ;;; init.el ends here

@@ -5,6 +5,7 @@
 
 ;; dot
 (use-package graphviz-dot-mode
+  :hook (graphviz-dot-mode . xah-syntax-color-hex)
   :config (add-to-list 'auto-mode-alist '("\\.dot\\'" . graphviz-dot-mode)))
 
 
@@ -36,6 +37,7 @@
 
 (use-package plantuml-mode
   :after org
+  ;;:hook (plantuml-mode . xah-syntax-color-hex) not work???
   :config
   (let ((url "https://jaist.dl.sourceforge.net/project/plantuml/plantuml.jar"))
     (setq plantuml-jar-path (expand-file-name "plantuml.jar" "~/.emacs.d/tools/plantuml/"))
@@ -44,8 +46,10 @@
       (url-copy-file url plantuml-jar-path)))
   (setq plantuml-default-exec-mode 'jar)
   (add-to-list
-   'org-src-lang-modes '("plantuml" . plantuml))  
-  (add-to-list 'auto-mode-alist '("\\.uml\\'" . plantuml-mode)))
+   'org-src-lang-modes '("plantuml" . plantuml))
+  (add-to-list 'auto-mode-alist '("\\(\\.uml\\|\\.puml\\)\\'" . plantuml-mode))
+  (add-hook 'plantuml-mode-hook 'xah-syntax-color-hex))
+
 
 
 ;; crontab
@@ -95,6 +99,20 @@
   :config
   (add-to-list 'auto-mode-alist '("Dockerfile\\'" . dockerfile-mode)))
 
+
+;; nginx config
+(use-package nginx-mode)
+(use-package company-nginx
+  :ensure t
+  :config
+  (eval-after-load 'nginx-mode
+    '(add-hook 'nginx-mode-hook #'company-nginx-keywords)))
+
+
+;; dtrace script mode
+(use-package dtrace-script-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.d\\'" . dtrace-script-mode)))
 
 (provide 'init-edit-mode)
 ;;; init-edit-mode.el ends here

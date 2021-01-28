@@ -92,6 +92,9 @@
     ((eq format 'latex)
      (format "\\colorbox{%s}{%s}" path desc))))) ;; require \usepackage{color}
 
+;;support confluence
+;;(use-package ox-confluence)
+
 
 ;; Various preferences
 (setq org-log-done t
@@ -218,5 +221,11 @@
 
 ;; Set default column view headings: Task Effort Clock_Summary
 (setq org-columns-default-format "%80ITEM(Task) %10Effort(Estimated Effort){:} %10CLOCKSUM")
+
+
+;;; Subscripts and Superscripts
+(setq org-pretty-entities t)
+(setq org-pretty-entities-include-sub-superscripts t)
+
 (provide 'init-org-utils)
 ;;; init-org-utils.el ends here

@@ -1,25 +1,7 @@
-;;; init-js.el --- Summary
+;;; init-js.el --- Support for Javascript and derivatives -*- lexical-binding: t -*-
 ;;; Commentary:
 ;;; init js mode config
 ;;; Code:
-
-
-(defcustom preferred-javascript-mode
-  (first (remove-if-not #'fboundp '(js2-mode js-mode)))
-  "Javascript mode to use for .js files."
-  :type 'symbol
-  :group 'programming
-  :options '(js2-mode js-mode))
-
-(defconst preferred-javascript-indent-level 2)
-
-;; Need to first remove from list if present, since elpa adds entries too, which
-;; may be in an arbitrary order
-(eval-when-compile (require 'cl-lib))
-(setq auto-mode-alist (cons `("\\.\\(js\\|es6\\)\\(\\.erb\\)?\\'" . ,preferred-javascript-mode)
-                            (loop for entry in auto-mode-alist
-                                  unless (eq preferred-javascript-mode (cdr entry))
-                                  collect entry)))
 
 
 (use-package json-mode)
@@ -29,17 +11,18 @@
   (setq-default js-indent-level 2
                 js2-bounce-indent-p nil)
   :config
+  (add-to-list 'auto-mode-alist '("\\.\\(js\\|es6\\)\\(\\.erb\\)?\\'" . js-mode))
   ;; Disable js2 mode's syntax error highlighting by default...
   (autoload 'flycheck-get-checker-for-buffer "flycheck")
   (defun sanityinc/disable-js2-checks-if-flycheck-active ()
     (unless (flycheck-get-checker-for-buffer)
-      (set (make-local-variable 'js2-mode-show-parse-errors) t)
-      (set (make-local-variable 'js2-mode-show-strict-warnings) t)))
+      (setq-local js2-mode-show-parse-errors t)
+      (setq-local js2-mode-show-strict-warnings t)
+      (when (derived-mode-p 'js-mode)
+        (js2-minor-mode 1))))
   (add-hook 'js2-mode-hook 'sanityinc/disable-js2-checks-if-flycheck-active)
   (add-hook 'js2-mode-hook (lambda () (setq mode-name "JS2")))
   (js2-imenu-extras-setup)
-  (setq-default js-indent-level preferred-javascript-indent-level)
-  (add-to-list 'interpreter-mode-alist (cons "node" preferred-javascript-mode))
   ;; Javascript nests {} and () a lot, so I find this helpful
   (when (executable-find "ag")
     (use-package xref-js2)
@@ -52,8 +35,6 @@
 
 (use-package coffee-mode
   :config
-  (setq coffee-js-mode preferred-javascript-mode
-        coffee-tab-width preferred-javascript-indent-level)
   (add-to-list 'auto-mode-alist '("\\.coffee\\.erb\\'" . coffee-mode)))
 
 
