@@ -4,7 +4,6 @@
 ;;; Code:
 
 
-
 (use-package lua-mode
   :ensure t
   :mode "\\.lua$"
@@ -27,10 +26,14 @@
                                    company-files
                                    )))
   (use-package flycheck-luacheck
-    :hook (lua-mode . (lambda () (flycheck-luacheck-standards ' ("ngx_lua")))))
+    :config (flycheck-luacheck-setup)
+    (setq flycheck-luacheck-standards ' ("ngx_lua"))
+    ;;:hook (lua-mode . (lambda () (flycheck-luacheck-standards ' ("ngx_lua"))))
+    )
   (setq lua-indent-level 4)
   (setq lua-indent-string-contents t)
-  (setq lua-prefix-key nil))
+  (setq lua-prefix-key nil)
+  :commands lsp)
 
 (provide 'init-lua)
 ;;; init-lua.el ends here

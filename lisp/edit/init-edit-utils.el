@@ -75,59 +75,21 @@
 
 
 
-;; (use-package nlinum-relative
-;;   :config
-;;   (setq nlinum-relative-current-symbol "->")    ;; or "" for display current line number
-;;   (setq nlinum-relative-offset 1))              ;; 1 if you want 0, 2, 3...
+;;; line number
 
-;; ;;;###autoload
-;; (define-globalized-minor-mode global-nlinum-relative-mode nlinum-relative-mode
-;;   (lambda () (unless (minibufferp) (nlinum-relative-mode))))
-;; (global-nlinum-relative-mode)
-;; (nlinum-relative-off)                         ;; default linum
+(global-display-line-numbers-mode)
+(when (fboundp 'display-line-numbers-mode)
+  ;;(setq-default display-line-numbers-width 3)
+  (add-hook 'prog-mode-hook 'display-line-numbers-mode))
 
-;; (use-package nlinum
-;;   :config
-;;   (global-nlinum-mode)
-;;   (setq nlinum-highlight-current-line t))
-
-(require 'linum)
-
-(global-linum-mode)
-(use-package hlinum
+(use-package goto-line-preview
   :config
-  (hlinum-activate)
-  (setq linum-highlight-in-all-buffersp t))
-(defvar linum-current-line 1 "Current line number.")
-(defvar linum-border-width 1 "Border width for linum.")
-
-;; (defface linum-current-line
-;;   `((t :inherit linum
-;;        :foreground "goldenrod"
-;;        :weight bold
-;;        ))
-;;   "Face for displaying the current line number."
-;;   :group 'linum)
-
-;; (defadvice linum-update (before advice-linum-update activate)
-;;   "Set the current line."
-;;   (setq linum-current-line (line-number-at-pos)
-;;         ;; It's the same algorithm that linum dynamic. I only had added one
-;;         ;; space in front of the first digit.
-;;         linum-border-width (number-to-string
-;;                             (+ 1 (length
-;;                                   (number-to-string
-;;                                    (count-lines (point-min) (point-max))))))))
-
-;; (defun linum-highlight-current-line (line-number)
-;;   "Highlight the current line number using `linum-current-line' face."
-;;   (let ((face (if (= line-number linum-current-line)
-;;                   'linum-current-line
-;;                 'linum)))
-;;     (propertize (format (concat "%" linum-border-width "d") line-number)
-;;                 'face face)))
-
-;; (setq linum-format 'linum-highlight-current-line)
+  (when (fboundp 'display-line-numbers-mode)
+    (defun sanityinc/with-display-line-numbers (f &rest args)
+      (let ((display-line-numbers t))
+        (apply f args)))
+    (advice-add 'goto-line-preview :around #'sanityinc/with-display-line-numbers))
+  :bind ([remap goto-line] . goto-line-preview))
 
 
 (use-package rainbow-delimiters

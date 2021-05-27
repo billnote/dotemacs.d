@@ -69,6 +69,7 @@
    (plantuml . t)
    (gnuplot . t )
    (sql . t)
+   (lua . t)
    ))
 ;;生成图像不提示
 (setq org-confirm-babel-evaluate nil)
@@ -224,7 +225,7 @@
 
 
 ;;; Subscripts and Superscripts
-(setq org-pretty-entities t)
+(setq org-pretty-entities nil)
 (setq org-pretty-entities-include-sub-superscripts t)
 
 (provide 'init-org-utils)

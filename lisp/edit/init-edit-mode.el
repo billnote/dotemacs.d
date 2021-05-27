@@ -104,9 +104,7 @@
 (use-package nginx-mode)
 (use-package company-nginx
   :ensure t
-  :config
-  (eval-after-load 'nginx-mode
-    '(add-hook 'nginx-mode-hook #'company-nginx-keywords)))
+  :config (add-hook 'nginx-mode-hook (lambda () (add-to-list 'company-backends #'company-nginx))))
 
 
 ;; dtrace script mode

@@ -132,7 +132,7 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-(toggle-frame-fullscreen)
+;;(toggle-frame-fullscreen)
 
 (provide 'init)
 ;;; init.el ends here

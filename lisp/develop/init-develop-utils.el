@@ -86,5 +86,63 @@
 
 (use-package imenu-list)
 
+
+;; config lsp-mode
+(use-package lsp-mode
+  :init
+  (setq lsp-keymap-prefix "C-c l")
+  (setq lsp-rust-server 'rust-analyzer)
+  (setq lsp-clients-lua-language-server-install-dir "~/.emacs.d/tools/lua-language-server/")
+  :hook ((rustic-mode . lsp)
+         ;;(rust-mode . lsp)
+         (lua-mode . lsp)
+         (lsp-mode . lsp-enable-which-key-integration))
+  :custom
+  ;; what to use when checking on-save. "check" is default, I prefer clippy
+  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-eldoc-render-all t)
+  (lsp-idle-delay 0.6)
+  (lsp-rust-analyzer-server-display-inlay-hints t)
+  :commands lsp)
+
+(use-package lsp-ui
+  :after lsp-mode
+  :delight
+  :commands lsp-ui-mode
+  :custom-face
+  (lsp-ui-doc-background ((t (:background nil))))
+  (lsp-ui-doc-header ((t (:inherit (font-lock-string-face italic)))))
+  :bind (:map lsp-ui-mode-map
+              ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
+              ([remap xref-find-references] . lsp-ui-peek-find-references)
+              ("C-c u" . lsp-ui-imenu))
+  :custom
+  (lsp-ui-doc-enable nil)
+  (lsp-ui-doc-header t)
+  (lsp-ui-doc-include-signature t)
+  (lsp-ui-doc-delay 0.6)
+  (lsp-ui-doc-position 'top) ;; top, bottom, or at-point
+  (lsp-ui-doc-border (face-foreground 'default))
+  (lsp-ui-doc-max-width 80)
+  (lsp-ui-doc-max-height 20)
+  (lsp-ui-sideline-enable t)
+  (lsp-ui-sideline-ignore-duplicate t)
+  (lsp-ui-sideline-show-code-actions t)
+  (lsp-ui-sideline-code-actions-prefix "💡")
+  :config
+  (use-package lsp-ui-flycheck
+    :ensure nil
+    :after lsp-mode
+    :config
+    (setq lsp-ui-flycheck-enable t)))
+
+;;(use-package lsp-ui :commands lsp-ui-mode)
+
+(use-package lsp-ivy
+  :commands lsp-ivy-workspace-symbol)
+
+(use-package lsp-treemacs
+  :commands lsp-treemacs-symbol)
+
 (provide 'init-develop-utils)
 ;;; init-develop-utils.el ends here

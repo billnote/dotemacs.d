@@ -131,6 +131,13 @@
     morestring=[s]{"}{"},
 }
 
+\\lstdefinelanguage{nginx}{ % support nginx conf
+    morekeywords={daemon,master_process,worker_processes,error_log,pid,events,accept_mutex,http,lua_package_path,init_by_lua_block,server,listen,location,rewrite,rewrite_by_lua_block,on,off,set},
+    alsoletter=0123456789.,
+    morecomment=[l]\\#,    
+    morestring=[s]{"}{"},
+}[keywords,comments,strings]
+
 \\lstdefinelanguage{js}{ % support js
     morekeywords={typeof,new,true,false,catch,function,return,null,catch,switch,var,if,in,while,do,else,case,break},
     morecomment=[l]//,
@@ -170,6 +177,24 @@
    morestring=[b]',%
    morestring=[b]",%
    morestring=[s]{`}{`},%
-   }
+   }   
 \\setlength\\arrayrulewidth{0.8pt}\\arrayrulecolor{MidnightBlue} % table line style
 %\\rowcolors{1}{Linen}{Beige} % table 行颜色设置
+
+\\lstdefinelanguage{lua}% support lua
+  {morekeywords=[1]{local,function,typeof,if,end,else,for,
+     do,return,metatable,require,table,and,or,not,while,break,in,until,goto,repeat,true,false,then,elseif},
+   sensitive=true,%
+   morecomment=[l]{--},%
+   morestring=[b]',%
+   morestring=[b]",%
+   morestring=[s]{`}{`},%
+   }[keywords,comments,strings]
+
+\\lstdefinelanguage{txt}% support text
+  {sensitive=true,%
+   morecomment=[l]\\#,    
+   morestring=[b]',%
+   morestring=[b]",%
+   morestring=[s]{`}{`},%
+   }[keywords,comments,strings]
