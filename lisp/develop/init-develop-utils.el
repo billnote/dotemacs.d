@@ -95,6 +95,7 @@
   (setq lsp-clients-lua-language-server-install-dir "~/.emacs.d/tools/lua-language-server/")
   :hook ((rustic-mode . lsp)
          ;;(rust-mode . lsp)
+         (go-mode . lsp)
          (lua-mode . lsp)
          (lsp-mode . lsp-enable-which-key-integration))
   :custom
@@ -103,6 +104,7 @@
   (lsp-eldoc-render-all t)
   (lsp-idle-delay 0.6)
   (lsp-rust-analyzer-server-display-inlay-hints t)
+  (lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
   :commands lsp)
 
 (use-package lsp-ui
@@ -143,6 +145,23 @@
 
 (use-package lsp-treemacs
   :commands lsp-treemacs-symbol)
+
+(use-package dap-mode
+  :hook
+  ((after-init . dap-mode))
+  (rustic-mode . (lambda () (require 'dap-gdb-lldb)))
+  :config
+  (use-package dap-ui
+    :ensure nil
+    :config
+    (dap-ui-mode t))
+  (dap-tooltip-mode t)
+  (tooltip-mode t))
+
+(use-package which-key
+  :config
+  (which-key-mode))
+
 
 (provide 'init-develop-utils)
 ;;; init-develop-utils.el ends here

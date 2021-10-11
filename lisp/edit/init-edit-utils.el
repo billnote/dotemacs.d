@@ -38,6 +38,11 @@
 
 (transient-mark-mode t)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(use-package emojify
+  :hook (after-init . global-emojify-mode))
+
 
  ;;; A simple visible bell which works in all terminal types
 

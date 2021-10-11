@@ -95,6 +95,7 @@
 (require 'init-org-publish)
 (require 'init-org-to-pdf)
 (require 'ox-confluence)
+(require 'init-org-roam)
 
 ;; shell
 (require 'init-multi-term)

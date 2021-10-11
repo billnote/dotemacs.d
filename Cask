@@ -1,12 +1,12 @@
-(source "gnu" "http://elpa.emacs-china.org/gnu/")
-(source "melpa" "http://elpa.emacs-china.org/melpa/")
-(source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
-(source "org" "http://elpa.emacs-china.org/org/")
+;;(source "gnu" "http://elpa.emacs-china.org/gnu/")
+;;(source "melpa" "http://elpa.emacs-china.org/melpa/")
+;;(source "melpa-stable" "http://elpa.emacs-china.org/melpa-stable/")
+;;(source "org" "http://elpa.emacs-china.org/org/")
 
-;; (source melpa)
-;; (source melpa-stable)
-;; (source gnu)
-;; (source org)
+(source melpa)
+(source melpa-stable)
+(source gnu)
+(source org)
 
 ;;------------------------------------------------
 ;;  package manager
@@ -39,6 +39,7 @@
 (depends-on "neotree")
 (depends-on "disable-mouse")
 (depends-on "all-the-icons-dired")
+(depends-on "dired-rainbow")
 
 ;;------------------------------------------------
 ;;  modern library for Emacs
@@ -96,7 +97,7 @@
 (depends-on "names")
 (depends-on "chinese-word-at-point")
 (depends-on "google-translate")
-
+(depends-on "emojify")
 
 ;;------------------------------------------------
 ;; major edit mode
@@ -246,6 +247,8 @@
 (depends-on "org-plus-contrib")
 (depends-on "grab-mac-link")
 (depends-on "org-cliplink")
+(depends-on "org-superstar")
+(depends-on "org-appear")
 
 ;;------------------------------------------------
 ;;  blog
@@ -266,6 +269,13 @@
 (depends-on "spaceline-all-the-icons" :git "https://github.com/billnote/spaceline-all-the-icons.el.git")
 (depends-on "fancy-battery")
 (depends-on "he-weather" :git "https://github.com/billnote/he-weather-mode.git")
+(depends-on "doom-themes")
+(depends-on "spacemacs-theme")
+
+;;------------------------------------------------
+;;  org roam
+;;------------------------------------------------
+(depends-on "org-roam")
 
 ;;------------------------------------------------
 ;;  osx

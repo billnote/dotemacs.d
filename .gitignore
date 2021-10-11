@@ -54,3 +54,9 @@ emojis
 /cnfonts
 abbrev_defs
 /transient
+.lsp-session-v1
+.dap-breakpoints
+.extension/
+org-roam.db
+/.cache/
+smex-items

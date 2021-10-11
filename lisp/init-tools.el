@@ -21,6 +21,14 @@
       (clipboard-kill-ring-save (point-min) (point-max)))
     encode-url))
 
+(defun t/durl (url)
+  "Encode URL."
+  (let ((decode-url (url-unhex-string url)))
+    (with-temp-buffer
+      (insert decode-url)
+      (clipboard-kill-ring-save (point-min) (point-max)))
+    decode-url))
+
 (defun t/lmd5 (plaintext)
   "This function return an lowercase MD5 hash, source by PLAINTEXT."
   (let ((ciphertext (md5 plaintext)))

@@ -50,10 +50,15 @@
   :config
   (setq company-idle-delay 0.6)
   (add-hook 'rustic-mode-hook #'company-mode)
-  (add-hook 'racer-mode-hook #'eldoc-mode)
-  (add-hook 'racer-mode-hook #'company-mode)
   (add-hook 'rustic-mode-hook #'cargo-minor-mode)
   (add-hook 'rustic-mode-hook #'lsp)
+  (dap-register-debug-template "Rust::GDB Run Configuration"
+                               (list :type "gdb"
+                                     :request "launch"
+                                     :name "GDB::Run"
+                                     :gdbpath "rust-gdb"
+                                     :target nil
+                                     :cwd nil))
   :custom
   ((rustic-format-trigger 'on-save)
    (rustic-format-on-save nil)
@@ -65,21 +70,6 @@
 
 (use-package toml-mode :ensure t)
 
-(use-package dap-mode
-  :hook
-  ((after-init . dap-mode))
-  (rustic-mode . (lambda () (require 'dap-gdb-lldb)))
-  :config
-  (use-package dap-ui
-    :ensure nil
-    :config
-    (dap-ui-mode t))
-  (dap-tooltip-mode t)
-  (tooltip-mode t))
-
-(use-package which-key
-  :config
-  (which-key-mode))
 
 (provide 'init-rust)
 ;;; init-rust.el ends here

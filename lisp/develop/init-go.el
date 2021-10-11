@@ -11,6 +11,7 @@
   (use-package company-go)
   :config
   (use-package flymake-go)
+  (use-package dap-go)
   (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
   (add-hook 'go-mode-hook 'company-mode)
   (add-hook 'go-mode-hook (lambda ()  (set (make-local-variable 'company-backends) '(company-go))
@@ -26,6 +27,7 @@
   (add-hook 'flymake-mode-hook
             (lambda()
               (local-set-key (kbd "C-c C-e m") 'flymake-popup-current-error-menu)))
+
   :bind (:map go-mode-map
               ("C-c C-r" . go-remove-unused-imports)
               ("C-c i" . go-goto-imports)

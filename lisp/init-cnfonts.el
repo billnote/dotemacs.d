@@ -7,5 +7,7 @@
   :config
   (cnfonts-enable))
 
+(setq cnfonts-use-face-font-rescale t)
+
 (provide 'init-cnfonts)
 ;;; init-cnfonts.el ends here
