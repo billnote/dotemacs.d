@@ -1,0 +1,871 @@
+[20:07:37.891][info] [#0:/Users/bill/.emacs.d/tools/lua-language-server/extension/server/main.lua:51]: Lua Lsp startup, root: 	/Users/bill/.emacs.d/tools/lua-language-server/extension/server
+[20:07:37.893][debug][#0:/Users/bill/.emacs.d/tools/lua-language-server/extension/server/main.lua:52]: ROOT:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server
+[20:07:37.893][debug][#0:/Users/bill/.emacs.d/tools/lua-language-server/extension/server/main.lua:53]: LOGPATH:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/log
+[20:07:37.893][debug][#0:/Users/bill/.emacs.d/tools/lua-language-server/extension/server/main.lua:54]: METAPATH:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta
+[20:07:37.902][info] [#0:script/service/telemetry.lua:20]: Telemetry Token:	6249D48B9EA49FAA
+[20:07:37.941][info] [#0:script/pub/pub.lua:48]: Create brave:	1
+[20:07:37.941][info] [#0:script/pub/pub.lua:48]: Create brave:	2
+[20:07:37.941][info] [#0:script/pub/pub.lua:48]: Create brave:	3
+[20:07:37.941][info] [#0:script/pub/pub.lua:48]: Create brave:	4
+[20:07:37.941][debug][#0:script/service/service.lua:136]: 
+========= Medical Examination Report =========
+    --------------- Memory ---------------
+        Total: 2.027 MB
+        # 00 : 2.027 MB
+        # 01 : 0.000 MB
+        # 02 : 0.000 MB
+        # 03 : 0.000 MB
+        # 04 : 0.000 MB
+    --------------- Coroutine ---------------
+        Total:     0
+        Running:   0
+        Suspended: 0
+        Normal:    0
+        Dead:      0
+    --------------- Cache ---------------
+        Total: 1
+        Dead:  0
+    --------------- Proto ---------------
+        Holdon:   0
+        Waiting:  0
+==============================================
+[20:07:38.044][debug][#0:script/provider/client.lua:32]: Client init	{
+    capabilities = {
+        textDocument = {
+            callHierarchy = {
+                dynamicRegistration = false,
+            },
+            codeAction = {
+                codeActionLiteralSupport = {
+                    codeActionKind = {
+                        valueSet = {
+                            [1] = "",
+                            [2] = "quickfix",
+                            [3] = "refactor",
+                            [4] = "refactor.extract",
+                            [5] = "refactor.inline",
+                            [6] = "refactor.rewrite",
+                            [7] = "source",
+                            [8] = "source.organizeImports",
+                        },
+                    },
+                },
+                dataSupport = true,
+                dynamicRegistration = true,
+                isPreferredSupport = true,
+                resolveSupport = {
+                    properties = {
+                        [1] = "edit",
+                        [2] = "command",
+                    },
+                },
+            },
+            completion = {
+                completionItem = {
+                    deprecatedSupport = true,
+                    documentationFormat = {
+                        [1] = "markdown",
+                        [2] = "plaintext",
+                    },
+                    insertReplaceSupport = true,
+                    insertTextModeSupport = {
+                        valueSet = {
+                            [1] = 1,
+                            [2] = 2,
+                        },
+                    },
+                    resolveAdditionalTextEditsSupport = true,
+                    resolveSupport = {
+                        properties = {
+                            [1] = "documentation",
+                            [2] = "details",
+                            [3] = "additionalTextEdits",
+                            [4] = "command",
+                        },
+                    },
+                    snippetSupport = true,
+                },
+                contextSupport = true,
+            },
+            declaration = {
+                linkSupport = true,
+            },
+            definition = {
+                linkSupport = true,
+            },
+            documentLink = {
+                dynamicRegistration = true,
+                tooltipSupport = true,
+            },
+            documentSymbol = {
+                hierarchicalDocumentSymbolSupport = true,
+                symbolKind = {
+                    valueSet = {
+                        [01] = 1,
+                        [02] = 2,
+                        [03] = 3,
+                        [04] = 4,
+                        [05] = 5,
+                        [06] = 6,
+                        [07] = 7,
+                        [08] = 8,
+                        [09] = 9,
+                        [10] = 10,
+                        [11] = 11,
+                        [12] = 12,
+                        [13] = 13,
+                        [14] = 14,
+                        [15] = 15,
+                        [16] = 16,
+                        [17] = 17,
+                        [18] = 18,
+                        [19] = 19,
+                        [20] = 20,
+                        [21] = 21,
+                        [22] = 22,
+                        [23] = 23,
+                        [24] = 24,
+                        [25] = 25,
+                        [26] = 26,
+                    },
+                },
+            },
+            foldingRange = {
+                dynamicRegistration = true,
+            },
+            formatting = {
+                dynamicRegistration = true,
+            },
+            hover = {
+                contentFormat = {
+                    [1] = "markdown",
+                    [2] = "plaintext",
+                },
+            },
+            implementation = {
+                linkSupport = true,
+            },
+            linkedEditingRange = {
+                dynamicRegistration = true,
+            },
+            publishDiagnostics = {
+                relatedInformation = true,
+                tagSupport = {
+                    valueSet = {
+                        [1] = 1,
+                        [2] = 2,
+                    },
+                },
+                versionSupport = true,
+            },
+            rangeFormatting = {
+                dynamicRegistration = true,
+            },
+            rename = {
+                dynamicRegistration = true,
+                prepareSupport = true,
+            },
+            signatureHelp = {
+                signatureInformation = {
+                    parameterInformation = {
+                        labelOffsetSupport = true,
+                    },
+                },
+            },
+            synchronization = {
+                didSave = true,
+                willSave = true,
+                willSaveWaitUntil = true,
+            },
+            typeDefinition = {
+                linkSupport = true,
+            },
+        },
+        window = {
+            showDocument = {
+                support = true,
+            },
+            workDoneProgress = true,
+        },
+        workspace = {
+            applyEdit = true,
+            codeLens = {
+                refreshSupport = true,
+            },
+            configuration = true,
+            didChangeWatchedFiles = {
+                dynamicRegistration = true,
+            },
+            executeCommand = {
+                dynamicRegistration = false,
+            },
+            fileOperations = {
+                didCreate = false,
+                didDelete = false,
+                didRename = false,
+                willCreate = false,
+                willDelete = false,
+                willRename = false,
+            },
+            symbol = {
+                symbolKind = {
+                    valueSet = {
+                        [01] = 1,
+                        [02] = 2,
+                        [03] = 3,
+                        [04] = 4,
+                        [05] = 5,
+                        [06] = 6,
+                        [07] = 7,
+                        [08] = 8,
+                        [09] = 9,
+                        [10] = 10,
+                        [11] = 11,
+                        [12] = 12,
+                        [13] = 13,
+                        [14] = 14,
+                        [15] = 15,
+                        [16] = 16,
+                        [17] = 17,
+                        [18] = 18,
+                        [19] = 19,
+                        [20] = 20,
+                        [21] = 21,
+                        [22] = 22,
+                        [23] = 23,
+                        [24] = 24,
+                        [25] = 25,
+                        [26] = 26,
+                    },
+                },
+            },
+            workspaceEdit = {
+                documentChanges = true,
+                resourceOperations = {
+                    [1] = "create",
+                    [2] = "rename",
+                    [3] = "delete",
+                },
+            },
+            workspaceFolders = true,
+        },
+    },
+    clientInfo = {
+        name = "emacs",
+        version = "GNU Emacs 27.2 (build 1, x86_64-apple-darwin18.7.0, Carbon Version 158 AppKit 1671.6)\
+ of 2021-03-28",
+    },
+    rootPath = "/Users/bill/workspace/openresty/game-smart-gateway/apisix",
+    rootUri = "file:///Users/bill/workspace/openresty/game-smart-gateway/apisix",
+    workDoneToken = "1",
+}
+[20:07:38.044][info] [#0:script/language.lua:135]: VSC language: nil
+[20:07:38.044][info] [#0:script/language.lua:136]: LS  language: en-us
+[20:07:38.061][info] [#0:script/workspace/workspace.lua:31]: Workspace inited: 	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix
+[20:07:38.061][info] [#0:script/workspace/workspace.lua:38]: Log path: 	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/log/file_Users_bill_workspace_openresty_game-smart-gateway_apisix.log
+[20:07:43.950][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/pleiades.lua
+[20:07:44.014][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/init.lua
+[20:07:44.065][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/upstream.lua
+[20:07:44.120][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/init.lua
+[20:07:44.172][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/upstream.lua
+[20:07:44.223][debug][#0:script/provider/provider.lua:264]: didOpen	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer.lua
+[20:07:45.819][debug][#0:script/config.lua:259]: Config update: 	{
+    color = {
+        mode = "Semantic",
+    },
+    completion = {
+        autoRequire = true,
+        callSnippet = "Disable",
+        displayContext = 6,
+        enable = true,
+        keywordSnippet = "Replace",
+        showParams = true,
+        workspaceWord = true,
+    },
+    diagnostics = {
+        disable = {
+        },
+        enable = true,
+        globals = {
+        },
+        neededFileStatus = {
+            ["ambiguity-1"] = "Any",
+            ["circle-doc-class"] = "Any",
+            ["close-non-object"] = "Any",
+            ["code-after-break"] = "Opened",
+            ["count-down-loop"] = "Any",
+            ["doc-field-no-class"] = "Any",
+            ["duplicate-doc-class"] = "Any",
+            ["duplicate-doc-field"] = "Any",
+            ["duplicate-doc-param"] = "Any",
+            ["duplicate-index"] = "Any",
+            ["duplicate-set-field"] = "Any",
+            ["empty-block"] = "Opened",
+            ["global-in-nil-env"] = "Any",
+            ["lowercase-global"] = "Any",
+            ["newfield-call"] = "Any",
+            ["newline-call"] = "Any",
+            ["no-implicit-any"] = "None",
+            ["redefined-local"] = "Opened",
+            ["redundant-parameter"] = "Opened",
+            ["redundant-value"] = "Opened",
+            ["trailing-space"] = "Opened",
+            ["unbalanced-assignments"] = "Any",
+            ["undefined-doc-class"] = "Any",
+            ["undefined-doc-name"] = "Any",
+            ["undefined-doc-param"] = "Any",
+            ["undefined-env-child"] = "Any",
+            ["undefined-field"] = "Opened",
+            ["undefined-global"] = "Any",
+            ["unknown-diag-code"] = "Any",
+            ["unused-function"] = "Opened",
+            ["unused-label"] = "Opened",
+            ["unused-local"] = "Opened",
+            ["unused-vararg"] = "Opened",
+            deprecated = "None",
+        },
+        severity = {
+            ["ambiguity-1"] = "Warning",
+            ["circle-doc-class"] = "Warning",
+            ["close-non-object"] = "Warning",
+            ["code-after-break"] = "Hint",
+            ["count-down-loop"] = "Warning",
+            ["doc-field-no-class"] = "Warning",
+            ["duplicate-doc-class"] = "Warning",
+            ["duplicate-doc-field"] = "Warning",
+            ["duplicate-doc-param"] = "Warning",
+            ["duplicate-index"] = "Warning",
+            ["duplicate-set-field"] = "Warning",
+            ["empty-block"] = "Hint",
+            ["global-in-nil-env"] = "Warning",
+            ["lowercase-global"] = "Information",
+            ["newfield-call"] = "Warning",
+            ["newline-call"] = "Information",
+            ["no-implicit-any"] = "Information",
+            ["redefined-local"] = "Hint",
+            ["redundant-parameter"] = "Hint",
+            ["redundant-value"] = "Hint",
+            ["trailing-space"] = "Hint",
+            ["unbalanced-assignments"] = "Warning",
+            ["undefined-doc-class"] = "Warning",
+            ["undefined-doc-name"] = "Warning",
+            ["undefined-doc-param"] = "Warning",
+            ["undefined-env-child"] = "Information",
+            ["undefined-field"] = "Warning",
+            ["undefined-global"] = "Warning",
+            ["unknown-diag-code"] = "Waiting",
+            ["unused-function"] = "Hint",
+            ["unused-label"] = "Hint",
+            ["unused-local"] = "Hint",
+            ["unused-vararg"] = "Hint",
+            deprecated = "Warning",
+        },
+        workspaceDelay = 0,
+        workspaceRate = 100,
+    },
+    hint = {
+        enable = false,
+        paramName = true,
+        paramType = true,
+        setType = false,
+    },
+    hover = {
+        enable = true,
+        enumsLimit = 5,
+        fieldInfer = 3000,
+        previewFields = 100,
+        viewNumber = true,
+        viewString = true,
+        viewStringMax = 1000,
+    },
+    intelliSense = {
+        searchDepth = 0,
+    },
+    runtime = {
+        builtin = {
+        },
+        fileEncoding = "utf8",
+        meta = "${version} ${language}",
+        nonstandardSymbol = {
+        },
+        path = {
+            [1] = "?.lua",
+            [2] = "?/init.lua",
+            [3] = "?/?.lua",
+        },
+        plugin = ".vscode/lua/plugin.lua",
+        special = {
+        },
+        unicodeName = false,
+        version = "Lua 5.4",
+    },
+    signatureHelp = {
+        enable = true,
+    },
+    telemetry = {
+        enable = false,
+    },
+    window = {
+        progressBar = true,
+        statusBar = true,
+    },
+    workspace = {
+        ignoreDir = {
+            [".vscode"] = true,
+        },
+        ignoreSubmodules = true,
+        library = {
+        },
+        maxPreload = 1000,
+        preloadFileSize = 100,
+        useGitIgnore = true,
+    },
+}	{
+    acceptSuggestionOnEnter = "on",
+    associations = {
+    },
+    exclude = {
+    },
+    semantic = "",
+}
+[20:07:45.854][debug][#0:script/provider/semantic-tokens.lua:104]: Refresh semantic tokens.
+[20:07:45.854][info] [#0:script/workspace/workspace.lua:296]: Preload start.
+[20:07:45.854][info] [#0:script/workspace/workspace.lua:81]: Ignore directory:	.vscode
+[20:07:45.854][debug][#0:script/workspace/workspace.lua:160]: getLibraryMatchers	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:45.854][info] [#0:script/workspace/workspace.lua:301]: Scan files at:	/Users/bill/workspace/openresty/game-smart-gateway/apisix
+[20:07:45.857][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/v1.lua , size = 5.740 KB
+[20:07:45.862][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/router.lua , size = 5.691 KB
+[20:07:45.865][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core.lua , size = 2.147 KB
+[20:07:45.866][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/router.lua , size = 5.009 KB
+[20:07:45.868][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_uri.lua , size = 1.599 KB
+[20:07:45.868][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/api_router.lua , size = 5.587 KB
+[20:07:45.871][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_uri_with_parameter.lua , size = 1.600 KB
+[20:07:45.872][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_host_uri.lua , size = 4.674 KB
+[20:07:45.874][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/route.lua , size = 4.479 KB
+[20:07:45.878][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/service.lua , size = 2.925 KB
+[20:07:45.879][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/least_conn.lua , size = 3.785 KB
+[20:07:45.881][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/chash.lua , size = 4.622 KB
+[20:07:45.883][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/ewma.lua , size = 6.812 KB
+[20:07:45.886][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/priority.lua , size = 2.695 KB
+[20:07:45.887][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/roundrobin.lua , size = 3.004 KB
+[20:07:45.889][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/ssl.lua , size = 3.309 KB
+[20:07:45.890][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/script.lua , size = 1.732 KB
+[20:07:45.891][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/patch.lua , size = 6.225 KB
+[20:07:45.895][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/constants.lua , size = 1.444 KB
+[20:07:45.895][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/ops.lua , size = 21.483 KB
+[20:07:45.909][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/debug.lua , size = 5.598 KB
+[20:07:45.913][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/util.lua , size = 3.201 KB
+[20:07:45.914][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/apisix.lua , size = 1.416 KB
+[20:07:45.915][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/env.lua , size = 3.005 KB
+[20:07:45.916][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/file.lua , size = 5.881 KB
+[20:07:45.919][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/etcd.lua , size = 10.210 KB
+[20:07:45.924][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/ngx_tpl.lua , size = 21.834 KB
+[20:07:45.926][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/batch-processor.lua , size = 6.655 KB
+[20:07:45.930][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/router.lua , size = 1.035 KB
+[20:07:45.930][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/log-util.lua , size = 3.018 KB
+[20:07:45.936][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/upstream.lua , size = 1.663 KB
+[20:07:45.936][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/timers.lua , size = 2.385 KB
+[20:07:45.937][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugin_config.lua , size = 2.166 KB
+[20:07:45.938][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/discoveries.lua , size = 2.077 KB
+[20:07:45.939][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugin_metadata.lua , size = 3.814 KB
+[20:07:45.941][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/utils.lua , size = 1.984 KB
+[20:07:45.942][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/units.lua , size = 2.551 KB
+[20:07:45.943][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/upstreams.lua , size = 8.417 KB
+[20:07:45.947][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/schema.lua , size = 1.155 KB
+[20:07:45.948][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/proto.lua , size = 5.209 KB
+[20:07:45.951][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/routes.lua , size = 9.184 KB
+[20:07:45.955][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/ssl.lua , size = 6.373 KB
+[20:07:45.959][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/global_rules.lua , size = 4.840 KB
+[20:07:45.962][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugins.lua , size = 3.049 KB
+[20:07:45.963][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/consumers.lua , size = 3.606 KB
+[20:07:45.965][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugin_config.lua , size = 4.709 KB
+[20:07:45.972][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/services.lua , size = 7.530 KB
+[20:07:45.976][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/stream_routes.lua , size = 4.444 KB
+[20:07:45.978][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/pleiades.lua , size = 8.934 KB
+[20:07:45.978][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/init.lua , size = 10.699 KB
+[20:07:45.984][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/eureka.lua , size = 8.186 KB
+[20:07:45.988][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/consul_kv.lua , size = 16.245 KB
+[20:07:45.995][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/dns.lua , size = 2.620 KB
+[20:07:45.996][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/init.lua , size = 1.490 KB
+[20:07:45.996][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/router/ip_port.lua , size = 2.725 KB
+[20:07:45.999][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/plugins/mqtt-proxy.lua , size = 5.522 KB
+[20:07:46.002][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugin.lua , size = 21.384 KB
+[20:07:46.012][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/referer-restriction.lua , size = 3.122 KB
+[20:07:46.021][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/api-breaker.lua , size = 6.807 KB
+[20:07:46.024][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/udp-logger.lua , size = 4.870 KB
+[20:07:46.026][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-rewrite.lua , size = 6.078 KB
+[20:07:46.028][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/wolf-rbac.lua , size = 16.266 KB
+[20:07:46.036][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/response-rewrite.lua , size = 4.388 KB
+[20:07:46.039][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/jwt-auth.lua , size = 9.380 KB
+[20:07:46.043][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/cors.lua , size = 8.283 KB
+[20:07:46.047][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count.lua , size = 5.916 KB
+[20:07:46.049][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/dubbo-proxy.lua , size = 1.871 KB
+[20:07:46.050][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless-pre-function.lua , size = 0.884 KB
+[20:07:46.050][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-id.lua , size = 1.921 KB
+[20:07:46.051][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/log-rotate.lua , size = 6.282 KB
+[20:07:46.054][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode.lua , size = 5.497 KB
+[20:07:46.056][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/consumer-restriction.lua , size = 4.332 KB
+[20:07:46.058][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/redirect.lua , size = 3.917 KB
+[20:07:46.060][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/kafka-logger.lua , size = 6.620 KB
+[20:07:46.063][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/prometheus/exporter.lua , size = 13.080 KB
+[20:07:46.070][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/unit-uid.lua , size = 8.003 KB
+[20:07:46.084][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/example-plugin.lua , size = 3.318 KB
+[20:07:46.085][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin.lua , size = 9.163 KB
+[20:07:46.089][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/node-status.lua , size = 2.377 KB
+[20:07:46.090][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/util.lua , size = 3.390 KB
+[20:07:46.092][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/proto.lua , size = 2.245 KB
+[20:07:46.093][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/request.lua , size = 2.482 KB
+[20:07:46.094][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/response.lua , size = 2.380 KB
+[20:07:46.095][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/batch-requests.lua , size = 7.613 KB
+[20:07:46.099][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/http-logger.lua , size = 9.018 KB
+[20:07:46.103][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/fault-injection.lua , size = 4.165 KB
+[20:07:46.107][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-validation.lua , size = 3.403 KB
+[20:07:46.108][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/syslog.lua , size = 5.759 KB
+[20:07:46.112][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/traffic-split.lua , size = 8.526 KB
+[20:07:46.116][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/uri-blocker.lua , size = 2.611 KB
+[20:07:46.117][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/server-info.lua , size = 6.616 KB
+[20:07:46.120][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/reporter.lua , size = 5.332 KB
+[20:07:46.123][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/random_sampler.lua , size = 1.216 KB
+[20:07:46.124][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/codec.lua , size = 3.988 KB
+[20:07:46.127][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-req.lua , size = 3.008 KB
+[20:07:46.129][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/sls-logger.lua , size = 6.701 KB
+[20:07:46.132][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/hmac-auth.lua , size = 12.750 KB
+[20:07:46.139][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/skywalking.lua , size = 4.303 KB
+[20:07:46.142][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/echo.lua , size = 3.619 KB
+[20:07:46.145][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-conn.lua , size = 3.831 KB
+[20:07:46.147][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/ip-restriction.lua , size = 4.375 KB
+[20:07:46.149][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count/limit-count-redis-cluster.lua , size = 3.596 KB
+[20:07:46.151][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/session-verify.lua , size = 4.505 KB
+[20:07:46.154][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/key-auth.lua , size = 2.837 KB
+[20:07:46.157][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count/limit-count-redis.lua , size = 3.857 KB
+[20:07:46.159][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/basic-auth.lua , size = 4.854 KB
+[20:07:46.161][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/error-log-logger.lua , size = 5.971 KB
+[20:07:46.164][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless/init.lua , size = 3.679 KB
+[20:07:46.183][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/slslog/rfc5424.lua , size = 3.925 KB
+[20:07:46.185][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-mirror.lua , size = 1.695 KB
+[20:07:46.185][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/prometheus.lua , size = 1.911 KB
+[20:07:46.186][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/openid-connect.lua , size = 11.250 KB
+[20:07:46.191][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/tcp-logger.lua , size = 5.509 KB
+[20:07:46.195][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/authz-keycloak.lua , size = 23.342 KB
+[20:07:46.208][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/signature-auth.lua , size = 4.910 KB
+[20:07:46.212][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless-post-function.lua , size = 0.885 KB
+[20:07:46.212][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/consumer.lua , size = 3.691 KB
+[20:07:46.214][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-cache.lua , size = 7.990 KB
+[20:07:46.220][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/demo.lua , size = 1.078 KB
+[20:07:46.221][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/pay_xml.lua , size = 0.842 KB
+[20:07:46.222][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer.lua , size = 13.530 KB
+[20:07:46.222][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/people_xml.lua , size = 0.825 KB
+[20:07:46.222][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/table.lua , size = 5.845 KB
+[20:07:46.227][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/dns/client.lua , size = 4.476 KB
+[20:07:46.230][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_yaml.lua , size = 10.534 KB
+[20:07:46.237][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/log.lua , size = 3.510 KB
+[20:07:46.240][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/utils.lua , size = 7.652 KB
+[20:07:46.244][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/schema.lua , size = 1.837 KB
+[20:07:46.245][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/string.lua , size = 2.013 KB
+[20:07:46.247][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_util.lua , size = 2.058 KB
+[20:07:46.248][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/version.lua , size = 0.832 KB
+[20:07:46.249][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/profile.lua , size = 1.207 KB
+[20:07:46.249][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/timer.lua , size = 2.611 KB
+[20:07:46.251][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/id.lua , size = 2.513 KB
+[20:07:46.253][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/request.lua , size = 5.904 KB
+[20:07:46.256][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/ctx.lua , size = 6.391 KB
+[20:07:46.260][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/lrucache.lua , size = 4.927 KB
+[20:07:46.264][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_etcd.lua , size = 21.551 KB
+[20:07:46.276][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/response.lua , size = 3.614 KB
+[20:07:46.278][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/json.lua , size = 2.585 KB
+[20:07:46.279][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/etcd.lua , size = 8.863 KB
+[20:07:46.285][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/upstream.lua , size = 10.696 KB
+[20:07:46.285][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_local.lua , size = 1.222 KB
+[20:07:46.286][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/ssl/router/radixtree_sni.lua , size = 8.099 KB
+[20:07:46.290][info] [#0:script/workspace/workspace.lua:306]: Scan library at:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.290][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/schema_def.lua , size = 22.120 KB
+[20:07:46.314][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/unit/balancer_slot.lua , size = 7.776 KB
+[20:07:46.318][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/init.lua , size = 24.889 KB
+[20:07:46.318][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/basic.lua , size = 14.092 KB
+[20:07:46.318][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.323][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/table.lua , size = 2.767 KB
+[20:07:46.323][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.326][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/os.lua , size = 4.318 KB
+[20:07:46.326][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.328][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/string.lua , size = 6.111 KB
+[20:07:46.328][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.330][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/math.lua , size = 8.413 KB
+[20:07:46.330][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.336][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/coroutine.lua , size = 2.556 KB
+[20:07:46.336][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.337][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/debug.lua , size = 7.918 KB
+[20:07:46.337][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.342][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/io.lua , size = 6.443 KB
+[20:07:46.342][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.345][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/utf8.lua , size = 2.349 KB
+[20:07:46.345][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.346][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/package.lua , size = 2.979 KB
+[20:07:46.346][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.348][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/builtin.lua , size = 0.260 KB
+[20:07:46.348][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:46.349][info] [#0:script/workspace/workspace.lua:310]: Found 158 files.
+[20:07:46.349][info] [#0:script/workspace/workspace.lua:312]: Loaded 158/158 files
+[20:07:46.349][info] [#0:script/workspace/workspace.lua:321]: Preload finish.
+[20:07:46.362][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [0.558]sec.
+[20:07:46.364][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [0.559]sec.
+[20:07:46.399][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [0.594]sec.
+[20:07:46.410][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [0.604]sec.
+[20:07:46.579][debug][#0:script/proto/proto.lua:131]: Method [initialized] takes [0.617]sec.
+[20:07:46.586][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [0.619]sec.
+[20:07:47.367][info] [#0:script/workspace/workspace.lua:296]: Preload start.
+[20:07:47.367][info] [#0:script/workspace/workspace.lua:81]: Ignore directory:	.vscode
+[20:07:47.367][debug][#0:script/workspace/workspace.lua:160]: getLibraryMatchers	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.367][info] [#0:script/workspace/workspace.lua:301]: Scan files at:	/Users/bill/workspace/openresty/game-smart-gateway/apisix
+[20:07:47.368][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/v1.lua , size = 5.740 KB
+[20:07:47.372][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/router.lua , size = 5.691 KB
+[20:07:47.375][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core.lua , size = 2.147 KB
+[20:07:47.376][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/router.lua , size = 5.009 KB
+[20:07:47.379][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/api_router.lua , size = 5.587 KB
+[20:07:47.383][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_uri.lua , size = 1.599 KB
+[20:07:47.384][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_host_uri.lua , size = 4.674 KB
+[20:07:47.386][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/router/radixtree_uri_with_parameter.lua , size = 1.600 KB
+[20:07:47.387][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/route.lua , size = 4.479 KB
+[20:07:47.390][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/http/service.lua , size = 2.925 KB
+[20:07:47.391][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/least_conn.lua , size = 3.785 KB
+[20:07:47.393][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/chash.lua , size = 4.622 KB
+[20:07:47.396][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/ewma.lua , size = 6.812 KB
+[20:07:47.400][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/roundrobin.lua , size = 3.004 KB
+[20:07:47.401][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/priority.lua , size = 2.695 KB
+[20:07:47.402][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/ssl.lua , size = 3.309 KB
+[20:07:47.404][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/script.lua , size = 1.732 KB
+[20:07:47.405][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/patch.lua , size = 6.225 KB
+[20:07:47.408][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/constants.lua , size = 1.444 KB
+[20:07:47.409][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/debug.lua , size = 5.598 KB
+[20:07:47.412][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/util.lua , size = 3.201 KB
+[20:07:47.415][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/ngx_tpl.lua , size = 21.834 KB
+[20:07:47.416][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/apisix.lua , size = 1.416 KB
+[20:07:47.417][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/ops.lua , size = 21.483 KB
+[20:07:47.429][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/env.lua , size = 3.005 KB
+[20:07:47.430][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/file.lua , size = 5.881 KB
+[20:07:47.458][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/cli/etcd.lua , size = 10.210 KB
+[20:07:47.465][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/batch-processor.lua , size = 6.655 KB
+[20:07:47.468][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/router.lua , size = 1.035 KB
+[20:07:47.468][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/log-util.lua , size = 3.018 KB
+[20:07:47.470][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/upstream.lua , size = 1.663 KB
+[20:07:47.470][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/timers.lua , size = 2.385 KB
+[20:07:47.471][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugin_config.lua , size = 2.166 KB
+[20:07:47.473][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/discoveries.lua , size = 2.077 KB
+[20:07:47.474][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/units.lua , size = 2.551 KB
+[20:07:47.476][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugin_metadata.lua , size = 3.814 KB
+[20:07:47.478][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/utils.lua , size = 1.984 KB
+[20:07:47.479][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/schema.lua , size = 1.155 KB
+[20:07:47.480][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/upstreams.lua , size = 8.417 KB
+[20:07:47.485][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/proto.lua , size = 5.209 KB
+[20:07:47.489][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/routes.lua , size = 9.184 KB
+[20:07:47.495][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/ssl.lua , size = 6.373 KB
+[20:07:47.499][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/global_rules.lua , size = 4.840 KB
+[20:07:47.502][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugins.lua , size = 3.049 KB
+[20:07:47.504][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/consumers.lua , size = 3.606 KB
+[20:07:47.506][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugin_config.lua , size = 4.709 KB
+[20:07:47.510][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/stream_routes.lua , size = 4.444 KB
+[20:07:47.513][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/services.lua , size = 7.530 KB
+[20:07:47.517][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/init.lua , size = 10.699 KB
+[20:07:47.523][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/pleiades.lua , size = 8.934 KB
+[20:07:47.523][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/consul_kv.lua , size = 16.245 KB
+[20:07:47.532][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/eureka.lua , size = 8.186 KB
+[20:07:47.535][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/dns.lua , size = 2.620 KB
+[20:07:47.539][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/init.lua , size = 1.490 KB
+[20:07:47.541][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/router/ip_port.lua , size = 2.725 KB
+[20:07:47.542][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/plugins/mqtt-proxy.lua , size = 5.522 KB
+[20:07:47.545][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugin.lua , size = 21.384 KB
+[20:07:47.558][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/referer-restriction.lua , size = 3.122 KB
+[20:07:47.559][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/api-breaker.lua , size = 6.807 KB
+[20:07:47.563][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/udp-logger.lua , size = 4.870 KB
+[20:07:47.566][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/wolf-rbac.lua , size = 16.266 KB
+[20:07:47.576][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-rewrite.lua , size = 6.078 KB
+[20:07:47.580][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/response-rewrite.lua , size = 4.388 KB
+[20:07:47.582][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/jwt-auth.lua , size = 9.380 KB
+[20:07:47.587][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/cors.lua , size = 8.283 KB
+[20:07:47.591][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count.lua , size = 5.916 KB
+[20:07:47.594][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/log-rotate.lua , size = 6.282 KB
+[20:07:47.597][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/dubbo-proxy.lua , size = 1.871 KB
+[20:07:47.599][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-id.lua , size = 1.921 KB
+[20:07:47.600][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless-pre-function.lua , size = 0.884 KB
+[20:07:47.601][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode.lua , size = 5.497 KB
+[20:07:47.604][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/consumer-restriction.lua , size = 4.332 KB
+[20:07:47.607][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/redirect.lua , size = 3.917 KB
+[20:07:47.610][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/kafka-logger.lua , size = 6.620 KB
+[20:07:47.614][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/prometheus/exporter.lua , size = 13.080 KB
+[20:07:47.621][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/unit-uid.lua , size = 8.003 KB
+[20:07:47.624][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/node-status.lua , size = 2.377 KB
+[20:07:47.659][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/example-plugin.lua , size = 3.318 KB
+[20:07:47.662][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin.lua , size = 9.163 KB
+[20:07:47.667][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/util.lua , size = 3.390 KB
+[20:07:47.668][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/proto.lua , size = 2.245 KB
+[20:07:47.670][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/request.lua , size = 2.482 KB
+[20:07:47.672][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/response.lua , size = 2.380 KB
+[20:07:47.674][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/batch-requests.lua , size = 7.613 KB
+[20:07:47.678][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/http-logger.lua , size = 9.018 KB
+[20:07:47.683][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/fault-injection.lua , size = 4.165 KB
+[20:07:47.685][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/traffic-split.lua , size = 8.526 KB
+[20:07:47.692][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-validation.lua , size = 3.403 KB
+[20:07:47.695][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/uri-blocker.lua , size = 2.611 KB
+[20:07:47.696][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/syslog.lua , size = 5.759 KB
+[20:07:47.699][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/server-info.lua , size = 6.616 KB
+[20:07:47.704][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/reporter.lua , size = 5.332 KB
+[20:07:47.709][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/random_sampler.lua , size = 1.216 KB
+[20:07:47.709][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/codec.lua , size = 3.988 KB
+[20:07:47.713][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/sls-logger.lua , size = 6.701 KB
+[20:07:47.716][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-req.lua , size = 3.008 KB
+[20:07:47.718][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/hmac-auth.lua , size = 12.750 KB
+[20:07:47.727][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/skywalking.lua , size = 4.303 KB
+[20:07:47.730][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/echo.lua , size = 3.619 KB
+[20:07:47.733][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-conn.lua , size = 3.831 KB
+[20:07:47.734][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/ip-restriction.lua , size = 4.375 KB
+[20:07:47.740][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/session-verify.lua , size = 4.505 KB
+[20:07:47.742][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count/limit-count-redis-cluster.lua , size = 3.596 KB
+[20:07:47.745][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/limit-count/limit-count-redis.lua , size = 3.857 KB
+[20:07:47.747][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/key-auth.lua , size = 2.837 KB
+[20:07:47.749][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/error-log-logger.lua , size = 5.971 KB
+[20:07:47.752][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/basic-auth.lua , size = 4.854 KB
+[20:07:47.756][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless/init.lua , size = 3.679 KB
+[20:07:47.760][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/slslog/rfc5424.lua , size = 3.925 KB
+[20:07:47.761][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-mirror.lua , size = 1.695 KB
+[20:07:47.762][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/prometheus.lua , size = 1.911 KB
+[20:07:47.763][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/openid-connect.lua , size = 11.250 KB
+[20:07:47.768][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/tcp-logger.lua , size = 5.509 KB
+[20:07:47.773][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/signature-auth.lua , size = 4.910 KB
+[20:07:47.777][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/authz-keycloak.lua , size = 23.342 KB
+[20:07:47.792][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/serverless-post-function.lua , size = 0.885 KB
+[20:07:47.792][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-cache.lua , size = 7.990 KB
+[20:07:47.797][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/consumer.lua , size = 3.691 KB
+[20:07:47.799][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/pay_xml.lua , size = 0.842 KB
+[20:07:47.799][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/demo.lua , size = 1.078 KB
+[20:07:47.800][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/test/people_xml.lua , size = 0.825 KB
+[20:07:47.801][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer.lua , size = 13.530 KB
+[20:07:47.801][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/table.lua , size = 5.845 KB
+[20:07:47.807][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/dns/client.lua , size = 4.476 KB
+[20:07:47.811][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_yaml.lua , size = 10.534 KB
+[20:07:47.816][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/log.lua , size = 3.510 KB
+[20:07:47.818][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/utils.lua , size = 7.652 KB
+[20:07:47.846][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/schema.lua , size = 1.837 KB
+[20:07:47.848][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/string.lua , size = 2.013 KB
+[20:07:47.849][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_util.lua , size = 2.058 KB
+[20:07:47.850][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/profile.lua , size = 1.207 KB
+[20:07:47.850][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/version.lua , size = 0.832 KB
+[20:07:47.850][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/id.lua , size = 2.513 KB
+[20:07:47.852][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/timer.lua , size = 2.611 KB
+[20:07:47.853][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/request.lua , size = 5.904 KB
+[20:07:47.856][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/ctx.lua , size = 6.391 KB
+[20:07:47.860][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_etcd.lua , size = 21.551 KB
+[20:07:47.872][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/lrucache.lua , size = 4.927 KB
+[20:07:47.875][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/response.lua , size = 3.614 KB
+[20:07:47.877][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/json.lua , size = 2.585 KB
+[20:07:47.879][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/etcd.lua , size = 8.863 KB
+[20:07:47.885][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_local.lua , size = 1.222 KB
+[20:07:47.885][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/upstream.lua , size = 10.696 KB
+[20:07:47.885][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/ssl/router/radixtree_sni.lua , size = 8.099 KB
+[20:07:47.890][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/unit/balancer_slot.lua , size = 7.776 KB
+[20:07:47.894][info] [#0:script/workspace/workspace.lua:306]: Scan library at:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.895][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/schema_def.lua , size = 22.120 KB
+[20:07:47.904][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/init.lua , size = 24.889 KB
+[20:07:47.904][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/basic.lua , size = 14.092 KB
+[20:07:47.904][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.910][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/table.lua , size = 2.767 KB
+[20:07:47.910][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.911][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/os.lua , size = 4.318 KB
+[20:07:47.912][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.914][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/string.lua , size = 6.111 KB
+[20:07:47.914][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.917][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/math.lua , size = 8.413 KB
+[20:07:47.917][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.922][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/coroutine.lua , size = 2.556 KB
+[20:07:47.922][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.923][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/debug.lua , size = 7.918 KB
+[20:07:47.923][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.928][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/utf8.lua , size = 2.349 KB
+[20:07:47.929][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.930][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/io.lua , size = 6.443 KB
+[20:07:47.930][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.933][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/package.lua , size = 2.979 KB
+[20:07:47.933][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.935][info] [#0:script/workspace/workspace.lua:227]: Preload file at: file:///Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua%205.4%20en-us/builtin.lua , size = 0.260 KB
+[20:07:47.935][info] [#0:script/workspace/workspace.lua:229]: ++++As library of:	/Users/bill/.emacs.d/tools/lua-language-server/extension/server/meta/Lua 5.4 en-us
+[20:07:47.935][info] [#0:script/workspace/workspace.lua:310]: Found 158 files.
+[20:07:47.935][info] [#0:script/workspace/workspace.lua:312]: Loaded 158/158 files
+[20:07:47.935][info] [#0:script/workspace/workspace.lua:321]: Preload finish.
+[20:07:47.945][debug][#0:script/proto/proto.lua:131]: Method [textDocument/documentSymbol] takes [1.206]sec.
+[20:07:48.321][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer.lua	12
+[20:07:48.324][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/util.lua	1
+[20:07:48.806][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/init.lua	19
+[20:07:48.808][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/sls-logger.lua	1
+[20:07:48.810][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-cache.lua	1
+[20:07:48.812][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/api-breaker.lua	1
+[20:07:48.815][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/batch-processor.lua	2
+[20:07:48.828][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/table.lua	2
+[20:07:48.831][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/response-rewrite.lua	1
+[20:07:48.840][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_etcd.lua	4
+[20:07:48.844][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/http-logger.lua	1
+[20:07:48.847][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/kafka-logger.lua	2
+[20:07:48.848][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/node-status.lua	1
+[20:07:48.850][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/server-info.lua	4
+[20:07:48.853][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/consul_kv.lua	1
+[20:07:48.855][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/basic-auth.lua	1
+[20:07:48.863][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugin.lua	1
+[20:07:48.864][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/utils.lua	1
+[20:07:48.896][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/balancer/ewma.lua	1
+[20:07:48.897][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/echo.lua	1
+[20:07:48.905][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/udp-logger.lua	1
+[20:07:48.907][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/unit-uid.lua	1
+[20:07:48.909][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/router.lua	1
+[20:07:48.912][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/uri-blocker.lua	1
+[20:07:48.913][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/utils/log-util.lua	1
+[20:07:48.923][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/cors.lua	1
+[20:07:48.924][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/timers.lua	2
+[20:07:48.929][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/wolf-rbac.lua	1
+[20:07:48.933][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/lrucache.lua	1
+[20:07:48.935][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode.lua	1
+[20:07:48.939][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin.lua	1
+[20:07:48.944][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/slslog/rfc5424.lua	1
+[20:07:48.947][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/tcp-logger.lua	1
+[20:07:48.948][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-id.lua	1
+[20:07:48.950][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/eureka.lua	1
+[20:07:48.957][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/unit/balancer_slot.lua	1
+[20:07:48.964][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/prometheus/exporter.lua	1
+[20:07:48.967][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/json.lua	1
+[20:07:48.969][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/response.lua	1
+[20:07:48.972][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/ctx.lua	1
+[20:07:48.974][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/log.lua	1
+[20:07:48.975][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/timer.lua	4
+[20:07:48.976][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/id.lua	1
+[20:07:48.978][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/profile.lua	2
+[20:07:48.982][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/log-rotate.lua	1
+[20:07:48.984][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/utils.lua	3
+[20:07:48.987][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/signature-auth.lua	2
+[20:07:48.989][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/error-log-logger.lua	1
+[20:07:48.990][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/session-verify.lua	1
+[20:07:48.992][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/skywalking.lua	1
+[20:07:48.996][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/hmac-auth.lua	1
+[20:07:48.997][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/response.lua	1
+[20:07:48.998][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/grpc-transcode/request.lua	1
+[20:07:49.000][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/zipkin/codec.lua	1
+[20:07:49.001][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/redirect.lua	2
+[20:07:49.002][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/dubbo-proxy.lua	1
+[20:07:49.003][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/ssl.lua	2
+[20:07:49.005][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/consumer-restriction.lua	1
+[20:07:49.007][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/jwt-auth.lua	3
+[20:07:49.014][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/openid-connect.lua	1
+[20:07:49.016][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/request.lua	1
+[20:07:49.257][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/discovery/pleiades.lua	9
+[20:07:49.261][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/core/config_yaml.lua	5
+[20:07:49.263][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/batch-requests.lua	1
+[20:07:49.263][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/router/ip_port.lua	1
+[20:07:49.264][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/example-plugin.lua	1
+[20:07:49.267][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/init.lua	1
+[20:07:49.268][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/request-validation.lua	1
+[20:07:49.274][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/syslog.lua	1
+[20:07:49.278][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/proxy-rewrite.lua	1
+[20:07:49.279][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/admin/plugins.lua	1
+[20:07:49.282][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/stream/plugins/mqtt-proxy.lua	1
+[20:07:49.283][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/ip-restriction.lua	1
+[20:07:49.286][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/debug.lua	1
+[20:07:49.292][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/control/v1.lua	1
+[20:07:49.299][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/patch.lua	5
+[20:07:49.305][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/plugins/authz-keycloak.lua	1
+[20:07:49.418][debug][#0:script/provider/diagnostic.lua:223]: publishDiagnostics	file:///Users/bill/workspace/openresty/game-smart-gateway/apisix/upstream.lua	9
+[20:07:49.419][debug][#0:script/provider/diagnostic.lua:340]: 全文诊断耗时：	1.468793

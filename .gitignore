@@ -60,3 +60,4 @@ abbrev_defs
 org-roam.db
 /.cache/
 smex-items
+/request

@@ -134,6 +134,7 @@
   (load custom-file))
 
 ;;(toggle-frame-fullscreen)
+(use-package interaction-log)
 
 (provide 'init)
 ;;; init.el ends here

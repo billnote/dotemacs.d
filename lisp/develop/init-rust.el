@@ -62,7 +62,12 @@
   :custom
   ((rustic-format-trigger 'on-save)
    (rustic-format-on-save nil)
-   (rustic-lsp-format t)))
+   (rustic-lsp-format t))
+  :bind
+  (("C-c r t" . rustic-cargo-current-test)
+   ("C-c r T" . rustic-cargo-test)
+   ("C-c r r" . rustic-cargo-test-rerun)
+   ("C-c r a" . rustic-cargo-add)))
 
 (use-package cargo
   :ensure t

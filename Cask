@@ -19,6 +19,7 @@
 (depends-on "session")
 (depends-on "scratch")
 (depends-on "cnfonts")
+(depends-on "interaction-log")
 
 ;;------------------------------------------------
 ;;  keys
@@ -97,6 +98,8 @@
 (depends-on "names")
 (depends-on "chinese-word-at-point")
 (depends-on "google-translate")
+(depends-on "popup")
+(depends-on "youdao-dictionary")
 (depends-on "emojify")
 
 ;;------------------------------------------------

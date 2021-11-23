@@ -64,7 +64,7 @@ instead."
             (funcall search-function initial-input dir)))))
     :config
     (add-to-list 'ivy-height-alist (cons 'counsel-ag 20))
-    :bind (("M-?" . sanityinc/counsel-search-project))))
+    :bind (("C-c f" . sanityinc/counsel-search-project))))
 
 (use-package swiper
   :bind (

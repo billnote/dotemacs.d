@@ -101,7 +101,7 @@
   :custom
   ;; what to use when checking on-save. "check" is default, I prefer clippy
   (lsp-rust-analyzer-cargo-watch-command "clippy")
-  (lsp-eldoc-render-all t)
+  ;; (lsp-eldoc-render-all t)
   (lsp-idle-delay 0.6)
   (lsp-rust-analyzer-server-display-inlay-hints t)
   (lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
@@ -117,13 +117,14 @@
   :bind (:map lsp-ui-mode-map
               ([remap xref-find-definitions] . lsp-ui-peek-find-definitions)
               ([remap xref-find-references] . lsp-ui-peek-find-references)
-              ("C-c u" . lsp-ui-imenu))
+              ("C-c u" . lsp-ui-imenu)
+              ("C-c i" . lsp-ui-doc-focus-frame))
   :custom
-  (lsp-ui-doc-enable nil)
+  (lsp-ui-doc-enable t)
   (lsp-ui-doc-header t)
   (lsp-ui-doc-include-signature t)
-  (lsp-ui-doc-delay 0.6)
-  (lsp-ui-doc-position 'top) ;; top, bottom, or at-point
+  (lsp-ui-doc-delay 0.8)
+  (lsp-ui-doc-position 'at-point) ;; top, bottom, or at-point
   (lsp-ui-doc-border (face-foreground 'default))
   (lsp-ui-doc-max-width 80)
   (lsp-ui-doc-max-height 20)
