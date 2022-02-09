@@ -67,7 +67,9 @@
   (("C-c r t" . rustic-cargo-current-test)
    ("C-c r T" . rustic-cargo-test)
    ("C-c r r" . rustic-cargo-test-rerun)
-   ("C-c r a" . rustic-cargo-add)))
+   ("C-c r a" . rustic-cargo-add)
+   ("C-c r c" . rustic-compile)
+   ("C-c r e" . rustic-recompile)))
 
 (use-package cargo
   :ensure t

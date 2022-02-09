@@ -8,7 +8,7 @@
   :ensure nil
   :config
   (setq-default
-   powerline-text-scale-factor 1.14))
+   powerline-text-scale-factor 1.0))
 (use-package spaceline)
 (use-package all-the-icons)
 (use-package git-gutter)
@@ -27,7 +27,7 @@
   :after spaceline
   :config
   (setq spaceline-all-the-icons-hide-long-buffer-path t)
-  (setq spaceline-all-the-icons-separator-scale 2.0)
+  (setq spaceline-all-the-icons-separator-scale 1.8)
   (spaceline-all-the-icons-theme)
   (spaceline-all-the-icons--setup-anzu)            ;; Enable anzu searching
   (spaceline-all-the-icons--setup-package-updates) ;; Enable package update indicator
@@ -40,7 +40,7 @@
   (spaceline-toggle-all-the-icons-battery-status-on)
   (spaceline-toggle-all-the-icons-buffer-position-on)
   (spaceline-toggle-all-the-icons-buffer-id-on)
-  (spaceline-toggle-all-the-icons-buffer-path-on)
+  (spaceline-toggle-all-the-icons-buffer-path-off)
   (spaceline-toggle-all-the-icons-buffer-size-on)
   (spaceline-toggle-all-the-icons-dedicated-on)
   (spaceline-toggle-all-the-icons-eyebrowse-workspace-on)

@@ -14,6 +14,8 @@
 
 (use-package f)
 
+;; (setq debug-on-error t)
+
 (defconst mac? (eq system-type 'darwin))
 
 (if (fboundp 'with-eval-after-load)
@@ -49,8 +51,12 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (setq network-security-level 'low)
 
+
 ;;shell path
 (require 'init-exec-path)
+
+;;dashboard
+(require 'init-dashboard)
 
 ;;session
 (require 'init-sessions)

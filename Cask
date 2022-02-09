@@ -6,7 +6,7 @@
 (source melpa)
 (source melpa-stable)
 (source gnu)
-(source org)
+;; (source org)
 
 ;;------------------------------------------------
 ;;  package manager
@@ -20,6 +20,8 @@
 (depends-on "scratch")
 (depends-on "cnfonts")
 (depends-on "interaction-log")
+(depends-on "dashboard")
+(depends-on "dashboard-hackernews")
 
 ;;------------------------------------------------
 ;;  keys
@@ -128,8 +130,8 @@
 (depends-on "magit")
 (depends-on "git-gutter")
 (depends-on "git-blamed")
-(depends-on "gitignore-mode")
-(depends-on "gitconfig-mode")
+;; (depends-on "gitignore-mode")
+;; (depends-on "gitconfig-mode")
 (depends-on "git-timemachine")
 (depends-on "git-commit")
 (depends-on "git-messenger")
@@ -193,7 +195,6 @@
 ;;(depends-on "hl-sexp"  :git "https://github.com/billnote/highlight-sexp.git")
 (depends-on "immortal-scratch")
 (depends-on "eldoc-eval")
-(depends-on "cl-lib-highlight")
 (depends-on "macrostep")
 (depends-on "highlight-quoted")
 (depends-on "cask-mode")
@@ -237,7 +238,6 @@
 ;;  sql mode
 ;;------------------------------------------------
 (depends-on "sql-indent")
-(depends-on "sql")
 
 ;;------------------------------------------------
 ;; lua mode
@@ -247,7 +247,7 @@
 ;;------------------------------------------------
 ;;  org mode
 ;;------------------------------------------------
-(depends-on "org-plus-contrib")
+;; (depends-on "org-plus-contrib")
 (depends-on "grab-mac-link")
 (depends-on "org-cliplink")
 (depends-on "org-superstar")

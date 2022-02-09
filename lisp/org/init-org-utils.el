@@ -150,6 +150,8 @@
 ;; Allow refile to create parent tasks with confirmation
 (setq org-refile-allow-creating-parent-nodes 'confirm)
 
+(setq org-image-actual-width nil)
+
 
 ;;; Show the clocked-in task - if any - in the header line
 (defun sanityinc/show-org-clock-in-header-line ()
@@ -238,6 +240,9 @@
   :custom
   (org-superstar-remove-leading-stars t)
   ;; (org-superstar-headline-bullets-list '("◉" "○" "●" "○" "●" "○" "●"))
+  ;; (org-superstar-headline-bullets-list '("" "" "" "" "" ""))
+  ;; need nerd fonts
+  (org-superstar-headline-bullets-list '("" "" "" "●" "" "◉"))
   )
 
 ;; Make sure org-indent face is available
