@@ -182,11 +182,6 @@
 (add-to-list 'auto-mode-alist '("\\.emacs-project\\'" . emacs-lisp-mode))
 (add-to-list 'auto-mode-alist '("archive-contents\\'" . emacs-lisp-mode))
 
-(use-package cl-lib-highlight
-  :config
-  (after-load 'lisp-mode
-    (cl-lib-highlight-initialize)))
-
 ;; ----------------------------------------------------------------------------
 ;; Delete .elc files when reverting the .el from VC or magit
 ;; ----------------------------------------------------------------------------

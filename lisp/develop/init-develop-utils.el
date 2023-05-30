@@ -105,7 +105,10 @@
   (lsp-idle-delay 0.6)
   (lsp-rust-analyzer-server-display-inlay-hints t)
   (lsp-rust-analyzer-cargo-load-out-dirs-from-check t)
-  :commands lsp)
+  :commands lsp
+  :config
+  (add-hook 'hack-local-variables-hook
+            (lambda () (when (derived-mode-p 'rustic-mode) (lsp)))))
 
 (use-package lsp-ui
   :after lsp-mode

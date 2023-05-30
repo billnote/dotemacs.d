@@ -111,6 +111,8 @@
   :diminish undo-tree-mode
   :config (global-undo-tree-mode))
 
+(setq undo-tree-history-directory-alist '(("." . "~/.emacs.d/undo")))
+
 
 (use-package symbol-overlay
   :diminish symbol-overlay-mode
